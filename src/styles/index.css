@@ -1,0 +1,25 @@
+#particules-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.expand-button {
+  width: 200px;
+  transition: 0.5s;
+}
+.expand-button:hover {
+  width: 250px;
+}

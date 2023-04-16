@@ -1,0 +1,143 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2023-04-14 21:42+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: fr\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/data/timelineElements.js:43
+msgid "BacDate"
+msgstr "06/2020"
+
+#: src/data/timelineElements.js:42
+msgid "BacDescription"
+msgstr "Baccalauréat Scientifique, spécialité SI, optenu avec mention assez bien européenne."
+
+#: src/data/timelineElements.js:41
+msgid "BacTitle"
+msgstr "Obtention du Baccalauréat"
+
+#: src/Components/NavBar.js:40
+msgid "CV"
+msgstr "Mes CV"
+
+#: src/data/timelineElements.js:7
+msgid "EngeeneringSchoolDiplomaDate"
+msgstr "06/2025"
+
+#: src/data/timelineElements.js:6
+msgid "EngeeneringSchoolDiplomaDescription"
+msgstr "Obtention de mon diplôme d'ingénieur en informatique."
+
+#: src/data/timelineElements.js:5
+msgid "EngeeneringSchoolDiplomaTitle"
+msgstr "Diplome d'ingénieur en informatique"
+
+#: src/data/timelineElements.js:37
+msgid "EntryCesiDate"
+msgstr "09/2020"
+
+#: src/data/timelineElements.js:36
+msgid "EntryCesiDescription"
+msgstr "Mon entrée à l'école d'ingénieur CESI, pour y suivre une formation d'ingénieur en informatique. Cursus en 5 ans, avec un cycle préparatoire intégré."
+
+#: src/data/timelineElements.js:35
+msgid "EntryCesiTitle"
+msgstr "Entrée à l'école d'ingénieur CESI"
+
+#: src/Components/WelcomePage.js:28
+msgid "Hello !"
+msgstr "Salut !"
+
+#: src/Components/NavBar.js:25
+msgid "Home"
+msgstr "Accueil"
+
+#: src/Components/WelcomePage.js:51
+msgid "Let's go !"
+msgstr "C'est parti !"
+
+#: src/Components/NavBar.js:12
+#~ msgid "MyPortfolio"
+#~ msgstr "Mon portfolio"
+
+#: src/Components/CustomTimeline.js:7
+#~ msgid "MyTimeline"
+#~ msgstr "Mon parcours"
+
+#: src/data/timelineElements.js:31
+msgid "StageA2Date"
+msgstr "04/2022 - 06/2022"
+
+#: src/data/timelineElements.js:30
+msgid "StageA2Description"
+msgstr "Un stage de 4 mois réalisé chez Alcatel-Lucent pour y découvrir le monde de l'entreprise, et plus particulièrement le monde du tests automatisés. J'ai pu écrire différents tests automatisés en Java, et découvrir le framework Selenium. J'y ai également découvert le monde du DevOps, et plus particulièrement le CI/CD. Durant ce stage, j'ai développé un dashboard en React, NodeJS et MySQL, permettant d'afficher les résultats des tests."
+
+#: src/data/timelineElements.js:29
+msgid "StageA2Title"
+msgstr "Stage de 2ème année"
+
+#: src/data/timelineElements.js:25
+msgid "StageA3Date"
+msgstr "01/2023 - 04/2023"
+
+#: src/data/timelineElements.js:24
+msgid "StageA3Description"
+msgstr "Un stage de 3 mois réalisé chez Thinkfab en tant que développeur React. J'en retire une expérience enrichissante et de nouvelles connaissances dans des bibliothèques React, tel que Redux."
+
+#: src/data/timelineElements.js:23
+msgid "StageA3Title"
+msgstr "Stage de 3ème année"
+
+#: src/data/timelineElements.js:19
+msgid "StageA4Date"
+msgstr "09/2023 - 01/2024"
+
+#: src/data/timelineElements.js:18
+msgid "StageA4Description"
+msgstr "Un stage de 4ème année à l'étranger, dans le cadre des études"
+
+#: src/data/timelineElements.js:17
+msgid "StageA4Title"
+msgstr "Stage de 4ème année, à l'étranger"
+
+#: src/data/timelineElements.js:13
+msgid "StageA5Date"
+msgstr "Inconnue"
+
+#: src/data/timelineElements.js:12
+msgid "StageA5Description"
+msgstr "Un stage concluant les études"
+
+#: src/data/timelineElements.js:11
+msgid "StageA5Title"
+msgstr "Stage de fin d'étude (5ème année)"
+
+#: src/Components/NavBar.js:33
+msgid "Timeline"
+msgstr "Mon parcours"
+
+#: src/Components/WelcomePage.js:29
+msgid "Welcome to my portfolio !"
+msgstr "Bienvenue sur mon portfolio !"
+
+#: src/data/timelineElements.js:49
+msgid "highschoolDate"
+msgstr "09/2017 - 06/2020"
+
+#: src/data/timelineElements.js:48
+msgid "highschoolDescription"
+msgstr "Fillière générale S - SI (science de l'ingénieur), spécialité SI"
+
+#: src/data/timelineElements.js:47
+msgid "highschoolTitle"
+msgstr "Lycée Freppel"
+

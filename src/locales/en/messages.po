@@ -1,0 +1,158 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2023-04-14 21:42+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: en\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/data/timelineElements.js:43
+msgid "BacDate"
+msgstr "2020-06"
+
+#: src/data/timelineElements.js:42
+msgid "BacDescription"
+msgstr ""
+
+#: src/data/timelineElements.js:41
+msgid "BacTitle"
+msgstr ""
+
+#: src/Components/NavBar.js:40
+msgid "CV"
+msgstr ""
+
+#: src/data/timelineElements.js:7
+msgid "EngeeneringSchoolDiplomaDate"
+msgstr "2025-06"
+
+#: src/data/timelineElements.js:6
+msgid "EngeeneringSchoolDiplomaDescription"
+msgstr ""
+
+#: src/data/timelineElements.js:5
+msgid "EngeeneringSchoolDiplomaTitle"
+msgstr ""
+
+#: src/data/timelineElements.js:37
+msgid "EntryCesiDate"
+msgstr "2020-09"
+
+#: src/data/timelineElements.js:36
+msgid "EntryCesiDescription"
+msgstr ""
+
+#: src/data/timelineElements.js:35
+msgid "EntryCesiTitle"
+msgstr ""
+
+#: src/Components/WelcomePage.js:28
+msgid "Hello !"
+msgstr "Hello !"
+
+#: src/Components/NavBar.js:25
+msgid "Home"
+msgstr ""
+
+#: src/Components/WelcomePage.js:51
+msgid "Let's go !"
+msgstr "Let's go !"
+
+#: src/Components/NavBar.js:12
+#~ msgid "MyPortfolio"
+#~ msgstr "My portfolio"
+
+#: src/Components/CustomTimeline.js:7
+#~ msgid "MyTimeline"
+#~ msgstr "My background"
+
+#: src/data/timelineElements.js:31
+msgid "StageA2Date"
+msgstr "2022-04 / 2022-07"
+
+#: src/data/timelineElements.js:30
+msgid "StageA2Description"
+msgstr ""
+
+#: src/data/timelineElements.js:29
+msgid "StageA2Title"
+msgstr ""
+
+#: src/data/timelineElements.js:25
+msgid "StageA3Date"
+msgstr "2023-01 / 2023-04"
+
+#: src/data/timelineElements.js:24
+msgid "StageA3Description"
+msgstr ""
+
+#: src/data/timelineElements.js:23
+msgid "StageA3Title"
+msgstr ""
+
+#: src/data/timelineElements.js:19
+msgid "StageA4Date"
+msgstr "2023-09 / 2024-01"
+
+#: src/data/timelineElements.js:18
+msgid "StageA4Description"
+msgstr ""
+
+#: src/data/timelineElements.js:17
+msgid "StageA4Title"
+msgstr ""
+
+#: src/data/timelineElements.js:13
+msgid "StageA5Date"
+msgstr "Unknown"
+
+#: src/data/timelineElements.js:12
+msgid "StageA5Description"
+msgstr ""
+
+#: src/data/timelineElements.js:11
+msgid "StageA5Title"
+msgstr ""
+
+#: src/Components/NavBar.js:33
+msgid "Timeline"
+msgstr ""
+
+#: src/Components/WelcomePage.js:29
+msgid "Welcome to my portfolio !"
+msgstr ""
+
+#: src/Components/NavBar.js:19
+#~ msgid "cv"
+#~ msgstr ""
+
+#: src/data/timelineElements.js:49
+msgid "highschoolDate"
+msgstr "2017-09 / 2020-06"
+
+#: src/data/timelineElements.js:48
+msgid "highschoolDescription"
+msgstr ""
+
+#: src/data/timelineElements.js:47
+msgid "highschoolTitle"
+msgstr ""
+
+#: src/Components/NavBar.js:13
+#~ msgid "home"
+#~ msgstr ""
+
+#: src/Components/NavBar.js:16
+#~ msgid "timeline"
+#~ msgstr ""
+
+#: src/Components/NavBar.js:27
+#~ msgid "{pageName}"
+#~ msgstr ""
