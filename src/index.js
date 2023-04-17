@@ -65,13 +65,13 @@ root.render(
           <BrowserRouter>
             <Layout>
               <Routes>
-                <Route path="home" element={<WelcomePage />} />
+                <Route path="/" element={<WelcomePage />} />
                 <Route path="timeline" element={<CustomTimeline />}>
                   <Route path=":elementId" element={<TimelineDetails />} />
                 </Route>
                 <Route path="skills" element={<SkillsPreview />} />
                 <Route path="contact" element={<ContactMe />} />
-                <Route path="*" element={<Navigate to="/home" replace />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
               </Routes>
             </Layout>
           </BrowserRouter>

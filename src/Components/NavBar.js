@@ -16,7 +16,7 @@ function NavBar() {
               display: "flex",
             }}
           >
-            <Link to="/home" style={{ marginLeft: "10rem" }}>
+            <Link to="/" style={{ marginLeft: "10rem" }}>
               <Typography
                 variant="h6"
                 fontWeight={"bold"}
