@@ -25,6 +25,13 @@ function NavBar() {
                 {t`Home`}
               </Typography>
             </Link>
+            <Link to="/skills" style={{ marginLeft: "10rem" }}>
+              <Typography
+                variant="h6"
+                fontWeight={"bold"}
+                sx={{ color: "primary.main" }}
+              >{t`Skills`}</Typography>
+            </Link>
             <Link to="/timeline" style={{ marginLeft: "10rem" }}>
               <Typography
                 variant="h6"
@@ -32,12 +39,12 @@ function NavBar() {
                 sx={{ color: "primary.main" }}
               >{t`Timeline`}</Typography>
             </Link>
-            <Link to="/cv" style={{ marginLeft: "10rem" }}>
+            <Link to="/contact" style={{ marginLeft: "10rem" }}>
               <Typography
                 variant="h6"
                 fontWeight={"bold"}
                 sx={{ color: "primary.main" }}
-              >{t`CV`}</Typography>
+              >{t`Contact`}</Typography>
             </Link>
           </Box>
           <LanguageSwitcher />

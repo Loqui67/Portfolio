@@ -3,6 +3,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailIcon from "@mui/icons-material/Mail";
 import { Box, IconButton, Typography } from "@mui/material";
+import { t } from "@lingui/macro";
 
 function Footer() {
   return (
@@ -22,7 +23,7 @@ function Footer() {
       >
         <Box>
           <Typography variant="subtitle1" sx={{ color: "secondary.main" }}>
-            I'm still working on this website, so please be patient :)
+            {t`I'm still working on this website, so please be patient :)`}
           </Typography>
         </Box>
         <Box>
@@ -50,7 +51,7 @@ function Footer() {
         </Box>
         <Box>
           <Typography variant="subtitle1" sx={{ color: "secondary.main" }}>
-            Loïc Walter
+            © 2023 Loïc Walter
           </Typography>
         </Box>
       </Box>

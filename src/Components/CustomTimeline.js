@@ -11,6 +11,7 @@ import {
 import { Box, Stack, Typography } from "@mui/material";
 import { Link, Outlet, useParams } from "react-router-dom";
 import { elements as rawElements } from "../data/timelineElements";
+import { t } from "@lingui/macro";
 
 function CustomTimeline() {
   const [elements, setElements] = useState([]);
@@ -35,7 +36,7 @@ function CustomTimeline() {
         spacing={2}
         justifyContent="space-evenly"
         alignItems="center"
-        minHeight="90vh"
+        minHeight="85vh"
       >
         <Box
           sx={{
@@ -68,7 +69,7 @@ function CustomTimeline() {
                     paddingLeft: "0.5rem",
                   }}
                 >
-                  Click me !
+                  {t`Click on an event to learn more`}
                 </Typography>
               </TimelineContent>
             </TimelineItem>

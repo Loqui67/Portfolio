@@ -25,9 +25,17 @@ msgstr ""
 msgid "BacTitle"
 msgstr ""
 
-#: src/Components/NavBar.js:40
-msgid "CV"
-msgstr ""
+#: src/Components/CustomTimeline.js:72
+msgid "Click on an event to learn more"
+msgstr "Click on an event to learn more"
+
+#: src/Components/NavBar.js:47
+msgid "Contact"
+msgstr "Contact me"
+
+#: src/Components/ContactMe.js:175
+msgid "Contact Me"
+msgstr "Send me a message!"
 
 #: src/data/timelineElements.js:7
 msgid "EngeeneringSchoolDiplomaDate"
@@ -53,17 +61,29 @@ msgstr ""
 msgid "EntryCesiTitle"
 msgstr ""
 
+#: src/Components/ContactMe.js:144
+msgid "Error"
+msgstr "Error"
+
 #: src/Components/WelcomePage.js:28
 msgid "Hello !"
-msgstr "Hello !"
+msgstr "Hello!"
 
 #: src/Components/NavBar.js:25
 msgid "Home"
-msgstr ""
+msgstr "Home"
 
-#: src/Components/WelcomePage.js:51
+#: src/Components/Footer.js:26
+msgid "I'm still working on this website, so please be patient :)"
+msgstr "I'm still working on this website, so please be patient :)"
+
+#: src/Components/WelcomePage.js:54
 msgid "Let's go !"
 msgstr "Let's go !"
+
+#: src/Components/ContactMe.js:87
+msgid "Message sent successfully!"
+msgstr "Message sent successfully!"
 
 #: src/Components/NavBar.js:12
 #~ msgid "MyPortfolio"
@@ -72,6 +92,30 @@ msgstr "Let's go !"
 #: src/Components/CustomTimeline.js:7
 #~ msgid "MyTimeline"
 #~ msgstr "My background"
+
+#: src/Components/ContactMe.js:228
+msgid "Please enter a message."
+msgstr "Please enter a message."
+
+#: src/Components/ContactMe.js:197
+msgid "Please enter a name."
+msgstr "Please enter a name."
+
+#: src/Components/ContactMe.js:212
+msgid "Please enter a valid email."
+msgstr "Please enter a valid email."
+
+#: src/Components/ContactMe.js:69
+msgid "Please fill out the form correctly."
+msgstr "Please fill out the form correctly."
+
+#: src/Components/NavBar.js:33
+msgid "Skills"
+msgstr "My skills"
+
+#: src/Components/ContactMe.js:105
+msgid "Something went wrong. Please try again later."
+msgstr "Something went wrong. Please try again later."
 
 #: src/data/timelineElements.js:31
 msgid "StageA2Date"
@@ -121,17 +165,17 @@ msgstr ""
 msgid "StageA5Title"
 msgstr ""
 
-#: src/Components/NavBar.js:33
+#: src/Components/ContactMe.js:144
+msgid "Success"
+msgstr "Success"
+
+#: src/Components/NavBar.js:40
 msgid "Timeline"
-msgstr ""
+msgstr "My background"
 
-#: src/Components/WelcomePage.js:29
+#: src/Components/WelcomePage.js:32
 msgid "Welcome to my portfolio !"
-msgstr ""
-
-#: src/Components/NavBar.js:19
-#~ msgid "cv"
-#~ msgstr ""
+msgstr "Welcome to my portfolio!"
 
 #: src/data/timelineElements.js:49
 msgid "highschoolDate"
@@ -143,16 +187,4 @@ msgstr ""
 
 #: src/data/timelineElements.js:47
 msgid "highschoolTitle"
-msgstr ""
-
-#: src/Components/NavBar.js:13
-#~ msgid "home"
-#~ msgstr ""
-
-#: src/Components/NavBar.js:16
-#~ msgid "timeline"
-#~ msgstr ""
-
-#: src/Components/NavBar.js:27
-#~ msgid "{pageName}"
-#~ msgstr ""
+msgstr "Freppel High School"

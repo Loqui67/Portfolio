@@ -11,7 +11,7 @@ function WelcomePage() {
         display="flex"
         justifyContent="center"
         alignItems="center"
-        minHeight="90vh"
+        minHeight="85vh"
         sx={{
           color: "primary.main",
         }}
@@ -26,7 +26,10 @@ function WelcomePage() {
           }}
         >
           <Typography variant="h1">{t`Hello !`}</Typography>
-          <Typography variant="h2">{t`Welcome to my portfolio !`}</Typography>
+          <Typography
+            variant="h2"
+            gutterBottom
+          >{t`Welcome to my portfolio !`}</Typography>
           <Box
             sx={{
               backgroundColor: "navBarBackground.main",

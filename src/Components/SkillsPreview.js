@@ -1,7 +1,7 @@
 import React from "react";
 
-function CvPreview() {
+function SkillsPreview() {
   return <React.Fragment></React.Fragment>;
 }
 
-export default CvPreview;
+export default SkillsPreview;

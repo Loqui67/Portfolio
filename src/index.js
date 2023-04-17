@@ -7,7 +7,7 @@ import { I18nProvider } from "@lingui/react";
 import { messages as enMessages } from "./locales/en/messages";
 import { messages as frMessages } from "./locales/fr/messages";
 import { ThemeProvider, createTheme } from "@mui/material";
-import CvPreview from "./Components/CvPreview";
+import SkillsPreview from "./Components/SkillsPreview";
 import Layout from "./Components/Layout";
 import CustomTimeline from "./Components/CustomTimeline";
 import ParticlesBackground from "./Components/ParticlesBackground";
@@ -15,6 +15,7 @@ import "./styles/index.css";
 import TimelineDetails from "./Components/TimelineDetails";
 import { en, fr } from "make-plural/plurals";
 import { AppProvider } from "./AppContext";
+import ContactMe from "./Components/ContactMe";
 
 i18n.load({
   en: enMessages,
@@ -68,7 +69,8 @@ root.render(
                 <Route path="timeline" element={<CustomTimeline />}>
                   <Route path=":elementId" element={<TimelineDetails />} />
                 </Route>
-                <Route path="cv" element={<CvPreview />} />
+                <Route path="skills" element={<SkillsPreview />} />
+                <Route path="contact" element={<ContactMe />} />
                 <Route path="*" element={<Navigate to="/home" replace />} />
               </Routes>
             </Layout>

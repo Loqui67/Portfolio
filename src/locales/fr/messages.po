@@ -25,9 +25,17 @@ msgstr "Baccalauréat Scientifique, spécialité SI, optenu avec mention assez b
 msgid "BacTitle"
 msgstr "Obtention du Baccalauréat"
 
-#: src/Components/NavBar.js:40
-msgid "CV"
-msgstr "Mes CV"
+#: src/Components/CustomTimeline.js:72
+msgid "Click on an event to learn more"
+msgstr "Cliquer sur un événement pour en savoir plus"
+
+#: src/Components/NavBar.js:47
+msgid "Contact"
+msgstr "Me contacter"
+
+#: src/Components/ContactMe.js:175
+msgid "Contact Me"
+msgstr "Envoie-moi un message !"
 
 #: src/data/timelineElements.js:7
 msgid "EngeeneringSchoolDiplomaDate"
@@ -53,6 +61,10 @@ msgstr "Mon entrée à l'école d'ingénieur CESI, pour y suivre une formation d
 msgid "EntryCesiTitle"
 msgstr "Entrée à l'école d'ingénieur CESI"
 
+#: src/Components/ContactMe.js:144
+msgid "Error"
+msgstr "Erreur"
+
 #: src/Components/WelcomePage.js:28
 msgid "Hello !"
 msgstr "Salut !"
@@ -61,9 +73,17 @@ msgstr "Salut !"
 msgid "Home"
 msgstr "Accueil"
 
-#: src/Components/WelcomePage.js:51
+#: src/Components/Footer.js:26
+msgid "I'm still working on this website, so please be patient :)"
+msgstr "Je travaille encore sur ce site, alors soyez patients :)"
+
+#: src/Components/WelcomePage.js:54
 msgid "Let's go !"
 msgstr "C'est parti !"
+
+#: src/Components/ContactMe.js:87
+msgid "Message sent successfully!"
+msgstr "Le message a bien été envoyé !"
 
 #: src/Components/NavBar.js:12
 #~ msgid "MyPortfolio"
@@ -72,6 +92,30 @@ msgstr "C'est parti !"
 #: src/Components/CustomTimeline.js:7
 #~ msgid "MyTimeline"
 #~ msgstr "Mon parcours"
+
+#: src/Components/ContactMe.js:228
+msgid "Please enter a message."
+msgstr "Merci d'entrez un message."
+
+#: src/Components/ContactMe.js:197
+msgid "Please enter a name."
+msgstr "Merci d'entrez un nom."
+
+#: src/Components/ContactMe.js:212
+msgid "Please enter a valid email."
+msgstr "Merci d'entrez une adresse email valide."
+
+#: src/Components/ContactMe.js:69
+msgid "Please fill out the form correctly."
+msgstr "Merci de remplir le formulaire correctement."
+
+#: src/Components/NavBar.js:33
+msgid "Skills"
+msgstr "Mes compétences"
+
+#: src/Components/ContactMe.js:105
+msgid "Something went wrong. Please try again later."
+msgstr "Quelque chose s'est mal passé. Merci de réessayer plus tard."
 
 #: src/data/timelineElements.js:31
 msgid "StageA2Date"
@@ -121,11 +165,15 @@ msgstr "Un stage concluant les études"
 msgid "StageA5Title"
 msgstr "Stage de fin d'étude (5ème année)"
 
-#: src/Components/NavBar.js:33
+#: src/Components/ContactMe.js:144
+msgid "Success"
+msgstr "Succès"
+
+#: src/Components/NavBar.js:40
 msgid "Timeline"
 msgstr "Mon parcours"
 
-#: src/Components/WelcomePage.js:29
+#: src/Components/WelcomePage.js:32
 msgid "Welcome to my portfolio !"
 msgstr "Bienvenue sur mon portfolio !"
 
@@ -140,4 +188,3 @@ msgstr "Fillière générale S - SI (science de l'ingénieur), spécialité SI"
 #: src/data/timelineElements.js:47
 msgid "highschoolTitle"
 msgstr "Lycée Freppel"
-
