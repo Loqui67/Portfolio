@@ -11,7 +11,6 @@ function WelcomePage() {
         display="flex"
         justifyContent="center"
         alignItems="center"
-        minHeight="85vh"
         sx={{
           color: "primary.main",
         }}

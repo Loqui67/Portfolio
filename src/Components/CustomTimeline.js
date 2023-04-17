@@ -33,22 +33,21 @@ function CustomTimeline() {
     <React.Fragment>
       <Stack
         direction={{ xs: "column", sm: "row" }}
-        spacing={2}
+        spacing={5}
         justifyContent="space-evenly"
         alignItems="center"
-        minHeight="85vh"
       >
         <Box
           sx={{
             backgroundColor: "white.main",
             opacity: "0.8",
-            minHeight: "50vh",
-            height: "100%",
-            width: "30%",
-            marginInline: "5rem",
             boxShadow: 1,
             borderRadius: "1rem",
             padding: "1rem",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            minHeight: "calc(100vh - 200px)",
           }}
         >
           <Timeline>

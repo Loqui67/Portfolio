@@ -155,7 +155,6 @@ const ContactMe = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          minHeight: "85vh",
         }}
       >
         <Stack

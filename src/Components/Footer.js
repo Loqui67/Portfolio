@@ -2,13 +2,14 @@ import React from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailIcon from "@mui/icons-material/Mail";
-import { Box, IconButton, Typography } from "@mui/material";
+import { IconButton, Typography, Grid } from "@mui/material";
 import { t } from "@lingui/macro";
 
 function Footer() {
   return (
     <React.Fragment>
-      <Box
+      <Grid
+        container
         sx={{
           display: "flex",
           alignItems: "center",
@@ -16,17 +17,14 @@ function Footer() {
           height: "66px",
           backgroundColor: "primary.main",
           opacity: "0.8",
-          position: "fixed",
-          bottom: "0",
-          width: "100%",
         }}
       >
-        <Box>
+        <Grid item>
           <Typography variant="subtitle1" sx={{ color: "secondary.main" }}>
             {t`I'm still working on this website, so please be patient :)`}
           </Typography>
-        </Box>
-        <Box>
+        </Grid>
+        <Grid item>
           <IconButton
             href="https://github.com/Loqui67"
             target="_blank"
@@ -48,13 +46,13 @@ function Footer() {
           >
             <MailIcon sx={{ color: "secondary.main" }} />
           </IconButton>
-        </Box>
-        <Box>
+        </Grid>
+        <Grid item>
           <Typography variant="subtitle1" sx={{ color: "secondary.main" }}>
             © 2023 Loïc Walter
           </Typography>
-        </Box>
-      </Box>
+        </Grid>
+      </Grid>
     </React.Fragment>
   );
 }
