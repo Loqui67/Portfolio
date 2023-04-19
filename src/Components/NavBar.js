@@ -31,11 +31,11 @@ function NavBar() {
     },
     {
       name: t`About`,
-      path: "/aboutme",
+      path: "/about",
     },
     {
       name: t`Contact`,
-      path: "/contactme",
+      path: "/contact",
     },
   ];
 
