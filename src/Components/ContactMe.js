@@ -70,11 +70,14 @@ const ContactMe = () => {
     const isFormValid =
       Object.values(validations).every((value) => value) && areAllInputsValid();
     if (!isFormValid) {
-      setAlert({
-        type: "error",
-        message: t`Please fill out the form correctly.`,
+      setAlert(() => {
+        removeAlertAfter5s();
+        return {
+          type: "error",
+          message: t`Please fill out the form correctly.`,
+        };
       });
-      removeAlert();
+      removeAlertAfter5s();
       return;
     }
     setIsSubmitting(true);
@@ -88,9 +91,12 @@ const ContactMe = () => {
       .post("https://formspree.io/f/myyabryw", data)
       .then(() => {
         setIsSubmitting(false);
-        setAlert({
-          type: "success",
-          message: t`Message sent successfully!`,
+        setAlert(() => {
+          removeAlertAfter5s();
+          return {
+            type: "success",
+            message: t`Message sent successfully!`,
+          };
         });
         setUserInfo({
           name: "",
@@ -102,19 +108,20 @@ const ContactMe = () => {
           email: true,
           message: true,
         });
-        removeAlert();
       })
       .catch((err) => {
         setIsSubmitting(false);
-        setAlert({
-          type: "error",
-          message: t`Something went wrong. Please try again later.`,
+        setAlert(() => {
+          removeAlertAfter5s();
+          return {
+            type: "error",
+            message: t`Something went wrong. Please try again later.`,
+          };
         });
-        removeAlert();
       });
   };
 
-  const removeAlert = () => {
+  const removeAlertAfter5s = () => {
     setTimeout(() => {
       setAlert({
         type: "",

@@ -16,6 +16,29 @@ import { Link } from "react-router-dom";
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
 
+  const pages = [
+    {
+      name: t`Home`,
+      path: "/",
+    },
+    {
+      name: t`Skills`,
+      path: "/skills",
+    },
+    {
+      name: t`Timeline`,
+      path: "/timeline",
+    },
+    {
+      name: t`About`,
+      path: "/aboutme",
+    },
+    {
+      name: t`Contact`,
+      path: "/contactme",
+    },
+  ];
+
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -23,6 +46,12 @@ function NavBar() {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+
+  const VerticalBar = () => (
+    <Typography variant="h5" sx={{ color: "primary.main" }}>
+      |
+    </Typography>
+  );
   return (
     <React.Fragment>
       <Box sx={{ backgroundColor: "navBarBackground.main", opacity: "0.8" }}>
@@ -33,7 +62,7 @@ function NavBar() {
             alignItems: "center",
           }}
         >
-          <Box sx={{ display: { xs: "flex", lg: "none" } }}>
+          <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -60,100 +89,35 @@ function NavBar() {
                 horizontal: "right",
               }}
             >
-              <MenuItem component={Link} to="/">
-                <Typography
-                  variant="h6"
-                  fontWeight={"bold"}
-                  sx={{ color: "primary.main" }}
-                >
-                  {t`Home`}
-                </Typography>
-              </MenuItem>
-              <MenuItem component={Link} to="/skills">
-                <Typography
-                  variant="h6"
-                  fontWeight={"bold"}
-                  sx={{ color: "primary.main" }}
-                >{t`Skills`}</Typography>
-              </MenuItem>
-              <MenuItem component={Link} to="/timeline">
-                <Typography
-                  variant="h6"
-                  fontWeight={"bold"}
-                  sx={{ color: "primary.main" }}
-                >{t`Timeline`}</Typography>
-              </MenuItem>
-              <MenuItem component={Link} to="/about">
-                <Typography
-                  variant="h6"
-                  fontWeight={"bold"}
-                  sx={{ color: "primary.main" }}
-                >{t`About`}</Typography>
-              </MenuItem>
-              <MenuItem component={Link} to="/contact">
-                <Typography
-                  variant="h6"
-                  fontWeight={"bold"}
-                  sx={{ color: "primary.main" }}
-                >{t`Contact`}</Typography>
-              </MenuItem>
+              {pages.map((page, index) => (
+                <MenuItem component={Link} to={page.path} key={index}>
+                  <Typography variant="h6" sx={{ color: "primary.main" }}>
+                    {page.name}
+                  </Typography>
+                </MenuItem>
+              ))}
             </Menu>
           </Box>
-          <Box width={"70%"}>
+          <Box sx={{ width: { md: "90%", lg: "60%" } }}>
             <Grid
               container
               sx={{
-                display: { xs: "none", lg: "flex" },
+                display: { xs: "none", md: "flex" },
                 justifyContent: "space-evenly",
               }}
             >
-              <Grid item>
-                <Link to="/">
-                  <Typography
-                    variant="h6"
-                    fontWeight={"bold"}
-                    sx={{ color: "primary.main" }}
-                  >
-                    {t`Home`}
-                  </Typography>
-                </Link>
-              </Grid>
-              <Grid item>
-                <Link to="/skills">
-                  <Typography
-                    variant="h6"
-                    fontWeight={"bold"}
-                    sx={{ color: "primary.main" }}
-                  >{t`Skills`}</Typography>
-                </Link>
-              </Grid>
-              <Grid item>
-                <Link to="/timeline">
-                  <Typography
-                    variant="h6"
-                    fontWeight={"bold"}
-                    sx={{ color: "primary.main" }}
-                  >{t`Timeline`}</Typography>
-                </Link>
-              </Grid>
-              <Grid item>
-                <Link to="/about">
-                  <Typography
-                    variant="h6"
-                    fontWeight={"bold"}
-                    sx={{ color: "primary.main" }}
-                  >{t`About`}</Typography>
-                </Link>
-              </Grid>
-              <Grid item>
-                <Link to="/contact">
-                  <Typography
-                    variant="h6"
-                    fontWeight={"bold"}
-                    sx={{ color: "primary.main" }}
-                  >{t`Contact`}</Typography>
-                </Link>
-              </Grid>
+              {pages.map((page, index) => (
+                <React.Fragment key={index}>
+                  <Grid item>
+                    <Link to={page.path}>
+                      <Typography variant="h6" sx={{ color: "primary.main" }}>
+                        {page.name}
+                      </Typography>
+                    </Link>
+                  </Grid>
+                  {index !== pages.length - 1 && <VerticalBar />}
+                </React.Fragment>
+              ))}
             </Grid>
           </Box>
           <LanguageSwitcher />

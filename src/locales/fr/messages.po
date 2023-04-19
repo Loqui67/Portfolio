@@ -32,7 +32,7 @@ msgstr "Obtention du Baccalauréat"
 
 #: src/Components/CustomTimeline.js:72
 msgid "Click on an event to learn more"
-msgstr "Cliquer sur un événement pour en savoir plus"
+msgstr "Cliquez sur un événement pour en savoir plus"
 
 #: src/Components/NavBar.js:91
 #: src/Components/NavBar.js:145
