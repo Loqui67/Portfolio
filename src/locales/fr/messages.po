@@ -13,6 +13,11 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: src/Components/NavBar.js:98
+#: src/Components/NavBar.js:154
+msgid "About"
+msgstr "A propos de moi"
+
 #: src/data/timelineElements.js:43
 msgid "BacDate"
 msgstr "06/2020"
@@ -29,11 +34,12 @@ msgstr "Obtention du Baccalauréat"
 msgid "Click on an event to learn more"
 msgstr "Cliquer sur un événement pour en savoir plus"
 
-#: src/Components/NavBar.js:47
+#: src/Components/NavBar.js:91
+#: src/Components/NavBar.js:145
 msgid "Contact"
 msgstr "Me contacter"
 
-#: src/Components/ContactMe.js:175
+#: src/Components/ContactMe.js:180
 msgid "Contact Me"
 msgstr "Envoie-moi un message !"
 
@@ -61,27 +67,28 @@ msgstr "Mon entrée à l'école d'ingénieur CESI, pour y suivre une formation d
 msgid "EntryCesiTitle"
 msgstr "Entrée à l'école d'ingénieur CESI"
 
-#: src/Components/ContactMe.js:144
+#: src/Components/ContactMe.js:150
 msgid "Error"
 msgstr "Erreur"
 
-#: src/Components/WelcomePage.js:28
+#: src/Components/WelcomePage.js:27
 msgid "Hello !"
 msgstr "Salut !"
 
-#: src/Components/NavBar.js:25
+#: src/Components/NavBar.js:69
+#: src/Components/NavBar.js:117
 msgid "Home"
 msgstr "Accueil"
 
-#: src/Components/Footer.js:26
+#: src/Components/Footer.js:22
 msgid "I'm still working on this website, so please be patient :)"
 msgstr "Je travaille encore sur ce site, alors soyez patients :)"
 
-#: src/Components/WelcomePage.js:54
+#: src/Components/WelcomePage.js:53
 msgid "Let's go !"
 msgstr "C'est parti !"
 
-#: src/Components/ContactMe.js:87
+#: src/Components/ContactMe.js:93
 msgid "Message sent successfully!"
 msgstr "Le message a bien été envoyé !"
 
@@ -93,27 +100,28 @@ msgstr "Le message a bien été envoyé !"
 #~ msgid "MyTimeline"
 #~ msgstr "Mon parcours"
 
-#: src/Components/ContactMe.js:228
+#: src/Components/ContactMe.js:234
 msgid "Please enter a message."
-msgstr "Merci d'entrez un message."
+msgstr "Merci d'entrer un message."
 
-#: src/Components/ContactMe.js:197
+#: src/Components/ContactMe.js:203
 msgid "Please enter a name."
-msgstr "Merci d'entrez un nom."
+msgstr "Merci d'entrer un nom."
 
-#: src/Components/ContactMe.js:212
+#: src/Components/ContactMe.js:218
 msgid "Please enter a valid email."
-msgstr "Merci d'entrez une adresse email valide."
+msgstr "Merci d'entrer une adresse email valide."
 
-#: src/Components/ContactMe.js:69
+#: src/Components/ContactMe.js:75
 msgid "Please fill out the form correctly."
 msgstr "Merci de remplir le formulaire correctement."
 
-#: src/Components/NavBar.js:33
+#: src/Components/NavBar.js:77
+#: src/Components/NavBar.js:127
 msgid "Skills"
 msgstr "Mes compétences"
 
-#: src/Components/ContactMe.js:105
+#: src/Components/ContactMe.js:111
 msgid "Something went wrong. Please try again later."
 msgstr "Quelque chose s'est mal passé. Merci de réessayer plus tard."
 
@@ -165,15 +173,16 @@ msgstr "Un stage concluant les études"
 msgid "StageA5Title"
 msgstr "Stage de fin d'étude (5ème année)"
 
-#: src/Components/ContactMe.js:144
+#: src/Components/ContactMe.js:150
 msgid "Success"
 msgstr "Succès"
 
-#: src/Components/NavBar.js:40
+#: src/Components/NavBar.js:84
+#: src/Components/NavBar.js:136
 msgid "Timeline"
 msgstr "Mon parcours"
 
-#: src/Components/WelcomePage.js:32
+#: src/Components/WelcomePage.js:31
 msgid "Welcome to my portfolio !"
 msgstr "Bienvenue sur mon portfolio !"
 

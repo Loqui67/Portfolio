@@ -33,7 +33,7 @@ function NavBar() {
             alignItems: "center",
           }}
         >
-          <Box sx={{ display: { xs: "flex", md: "none" } }}>
+          <Box sx={{ display: { xs: "flex", lg: "none" } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -90,54 +90,72 @@ function NavBar() {
                   sx={{ color: "primary.main" }}
                 >{t`Contact`}</Typography>
               </MenuItem>
+              <MenuItem component={Link} to="/about">
+                <Typography
+                  variant="h6"
+                  fontWeight={"bold"}
+                  sx={{ color: "primary.main" }}
+                >{t`About`}</Typography>
+              </MenuItem>
             </Menu>
           </Box>
-          <Grid
-            container
-            sx={{
-              display: { xs: "none", md: "flex" },
-              justifyContent: "space-evenly",
-            }}
-          >
-            <Grid item>
-              <Link to="/">
-                <Typography
-                  variant="h6"
-                  fontWeight={"bold"}
-                  sx={{ color: "primary.main" }}
-                >
-                  {t`Home`}
-                </Typography>
-              </Link>
+          <Box width={"70%"}>
+            <Grid
+              container
+              sx={{
+                display: { xs: "none", lg: "flex" },
+                justifyContent: "space-evenly",
+              }}
+            >
+              <Grid item>
+                <Link to="/">
+                  <Typography
+                    variant="h6"
+                    fontWeight={"bold"}
+                    sx={{ color: "primary.main" }}
+                  >
+                    {t`Home`}
+                  </Typography>
+                </Link>
+              </Grid>
+              <Grid item>
+                <Link to="/skills">
+                  <Typography
+                    variant="h6"
+                    fontWeight={"bold"}
+                    sx={{ color: "primary.main" }}
+                  >{t`Skills`}</Typography>
+                </Link>
+              </Grid>
+              <Grid item>
+                <Link to="/timeline">
+                  <Typography
+                    variant="h6"
+                    fontWeight={"bold"}
+                    sx={{ color: "primary.main" }}
+                  >{t`Timeline`}</Typography>
+                </Link>
+              </Grid>
+              <Grid item>
+                <Link to="/contact">
+                  <Typography
+                    variant="h6"
+                    fontWeight={"bold"}
+                    sx={{ color: "primary.main" }}
+                  >{t`Contact`}</Typography>
+                </Link>
+              </Grid>
+              <Grid item>
+                <Link to="/about">
+                  <Typography
+                    variant="h6"
+                    fontWeight={"bold"}
+                    sx={{ color: "primary.main" }}
+                  >{t`About`}</Typography>
+                </Link>
+              </Grid>
             </Grid>
-            <Grid item>
-              <Link to="/skills">
-                <Typography
-                  variant="h6"
-                  fontWeight={"bold"}
-                  sx={{ color: "primary.main" }}
-                >{t`Skills`}</Typography>
-              </Link>
-            </Grid>
-            <Grid item>
-              <Link to="/timeline">
-                <Typography
-                  variant="h6"
-                  fontWeight={"bold"}
-                  sx={{ color: "primary.main" }}
-                >{t`Timeline`}</Typography>
-              </Link>
-            </Grid>
-            <Grid item>
-              <Link to="/contact">
-                <Typography
-                  variant="h6"
-                  fontWeight={"bold"}
-                  sx={{ color: "primary.main" }}
-                >{t`Contact`}</Typography>
-              </Link>
-            </Grid>
-          </Grid>
+          </Box>
           <LanguageSwitcher />
         </Toolbar>
       </Box>

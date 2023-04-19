@@ -16,6 +16,7 @@ import TimelineDetails from "./Components/TimelineDetails";
 import { en, fr } from "make-plural/plurals";
 import { AppProvider } from "./AppContext";
 import ContactMe from "./Components/ContactMe";
+import AboutMe from "./Components/AboutMe";
 
 i18n.load({
   en: enMessages,
@@ -71,6 +72,7 @@ root.render(
                 </Route>
                 <Route path="skills" element={<SkillsPreview />} />
                 <Route path="contact" element={<ContactMe />} />
+                <Route path="about" element={<AboutMe />} />
                 <Route path="*" element={<Navigate to="/" replace />} />
               </Routes>
             </Layout>

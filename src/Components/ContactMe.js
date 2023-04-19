@@ -67,7 +67,8 @@ const ContactMe = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const isFormValid = Object.values(validations).every((value) => value);
+    const isFormValid =
+      Object.values(validations).every((value) => value) && areAllInputsValid();
     if (!isFormValid) {
       setAlert({
         type: "error",
@@ -174,9 +175,11 @@ const ContactMe = () => {
             boxShadow: 1,
             borderRadius: "1rem",
             padding: "1rem",
+            width: "1200px",
+            maxWidth: "60%",
           }}
         >
-          <Typography variant="h4">{t`Contact Me`}</Typography>
+          <Typography variant="h4" gutterBottom>{t`Contact Me`}</Typography>
           {renderAlert()}
           <Box
             component="form"
@@ -219,6 +222,7 @@ const ContactMe = () => {
               />
               <TextField
                 multiline
+                TextField
                 id="message"
                 label="Message"
                 name="message"
