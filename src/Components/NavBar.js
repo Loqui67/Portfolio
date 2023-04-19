@@ -83,19 +83,19 @@ function NavBar() {
                   sx={{ color: "primary.main" }}
                 >{t`Timeline`}</Typography>
               </MenuItem>
-              <MenuItem component={Link} to="/contact">
-                <Typography
-                  variant="h6"
-                  fontWeight={"bold"}
-                  sx={{ color: "primary.main" }}
-                >{t`Contact`}</Typography>
-              </MenuItem>
               <MenuItem component={Link} to="/about">
                 <Typography
                   variant="h6"
                   fontWeight={"bold"}
                   sx={{ color: "primary.main" }}
                 >{t`About`}</Typography>
+              </MenuItem>
+              <MenuItem component={Link} to="/contact">
+                <Typography
+                  variant="h6"
+                  fontWeight={"bold"}
+                  sx={{ color: "primary.main" }}
+                >{t`Contact`}</Typography>
               </MenuItem>
             </Menu>
           </Box>
@@ -137,21 +137,21 @@ function NavBar() {
                 </Link>
               </Grid>
               <Grid item>
-                <Link to="/contact">
-                  <Typography
-                    variant="h6"
-                    fontWeight={"bold"}
-                    sx={{ color: "primary.main" }}
-                  >{t`Contact`}</Typography>
-                </Link>
-              </Grid>
-              <Grid item>
                 <Link to="/about">
                   <Typography
                     variant="h6"
                     fontWeight={"bold"}
                     sx={{ color: "primary.main" }}
                   >{t`About`}</Typography>
+                </Link>
+              </Grid>
+              <Grid item>
+                <Link to="/contact">
+                  <Typography
+                    variant="h6"
+                    fontWeight={"bold"}
+                    sx={{ color: "primary.main" }}
+                  >{t`Contact`}</Typography>
                 </Link>
               </Grid>
             </Grid>
