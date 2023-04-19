@@ -48,6 +48,11 @@ const ContactMe = () => {
     }
   };
 
+  const areAllInputsValid = () =>
+    validateInput("name", userInfo.name) &&
+    validateInput("email", userInfo.email) &&
+    validateInput("message", userInfo.message);
+
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setUserInfo((prevUserInfo) => ({
@@ -155,6 +160,8 @@ const ContactMe = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          width: "100%",
+          height: "100%",
         }}
       >
         <Stack
@@ -167,8 +174,6 @@ const ContactMe = () => {
             boxShadow: 1,
             borderRadius: "1rem",
             padding: "1rem",
-            width: "fit-content",
-            minWidth: "50%",
           }}
         >
           <Typography variant="h4">{t`Contact Me`}</Typography>
@@ -177,7 +182,8 @@ const ContactMe = () => {
             component="form"
             noValidate
             sx={{
-              "& .MuiTextField-root": { m: 1, width: "100ch" },
+              "& .MuiTextField-root": { m: 1 },
+              width: "100%",
             }}
           >
             <FormGroup>
@@ -226,15 +232,11 @@ const ContactMe = () => {
                 error={!validations.message}
                 helperText={!validations.message && t`Please enter a message.`}
               />
+              <input type="text" name="_gotcha" style={{ display: "none" }} />
               <Button
                 variant="contained"
                 sx={{ m: 1 }}
-                disabled={
-                  isSubmitting ||
-                  !validations.name ||
-                  !validations.email ||
-                  !validations.message
-                }
+                disabled={isSubmitting || !areAllInputsValid()}
                 onClick={handleSubmit}
               >
                 Submit

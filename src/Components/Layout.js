@@ -18,11 +18,12 @@ function Layout({ children }) {
             alignItems: "center",
             marginBlock: "5vh",
             flexGrow: 1,
+            width: "100%",
           }}
         >
           {children}
         </Grid>
-        <Grid item sx={{ mt: "auto" }}>
+        <Grid item sx={{ mt: "auto", height: "10%" }}>
           <Footer />
         </Grid>
       </Grid>

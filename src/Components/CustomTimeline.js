@@ -36,6 +36,7 @@ function CustomTimeline() {
         spacing={5}
         justifyContent="space-evenly"
         alignItems="center"
+        width="100%"
       >
         <Box
           sx={{
