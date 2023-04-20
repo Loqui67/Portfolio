@@ -7,7 +7,7 @@ function Layout({ children }) {
   return (
     <React.Fragment>
       <Grid container direction={"column"} minHeight={"100vh"}>
-        <Grid item>
+        <Grid item sx={{ minWidth: "100%" }}>
           <NavBar />
         </Grid>
         <Grid

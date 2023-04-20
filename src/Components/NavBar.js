@@ -7,6 +7,7 @@ import {
   Menu,
   MenuItem,
   IconButton,
+  Divider,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -47,11 +48,6 @@ function NavBar() {
     setAnchorElNav(null);
   };
 
-  const VerticalBar = () => (
-    <Typography variant="h5" sx={{ color: "primary.main" }}>
-      |
-    </Typography>
-  );
   return (
     <React.Fragment>
       <Box sx={{ backgroundColor: "navBarBackground.main", opacity: "0.8" }}>
@@ -82,19 +78,28 @@ function NavBar() {
               onClose={handleCloseNavMenu}
               anchorOrigin={{
                 vertical: "bottom",
-                horizontal: "left",
+                horizontal: "right",
               }}
               transformOrigin={{
-                vertical: "top",
+                vertical: "bottom",
                 horizontal: "right",
               }}
             >
               {pages.map((page, index) => (
-                <MenuItem component={Link} to={page.path} key={index}>
-                  <Typography variant="h6" sx={{ color: "primary.main" }}>
-                    {page.name}
-                  </Typography>
-                </MenuItem>
+                <React.Fragment key={index}>
+                  <MenuItem component={Link} to={page.path}>
+                    <Typography variant="h6" sx={{ color: "primary.main" }}>
+                      {page.name}
+                    </Typography>
+                  </MenuItem>
+                  {index !== pages.length - 1 && (
+                    <Divider
+                      orientation="horizontal"
+                      sx={{ backgroundColor: "primary.main", opacity: "0.5" }}
+                      flexItem
+                    />
+                  )}
+                </React.Fragment>
               ))}
             </Menu>
           </Box>
@@ -104,6 +109,7 @@ function NavBar() {
               sx={{
                 display: { xs: "none", md: "flex" },
                 justifyContent: "space-evenly",
+                alignItems: "center",
               }}
             >
               {pages.map((page, index) => (
@@ -115,7 +121,13 @@ function NavBar() {
                       </Typography>
                     </Link>
                   </Grid>
-                  {index !== pages.length - 1 && <VerticalBar />}
+                  {index !== pages.length - 1 && (
+                    <Divider
+                      orientation="vertical"
+                      sx={{ backgroundColor: "primary.main", opacity: "0.5" }}
+                      flexItem
+                    />
+                  )}
                 </React.Fragment>
               ))}
             </Grid>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, MenuItem, Menu, Typography } from "@mui/material";
 import { i18n } from "@lingui/core";
-import { languages } from "../Constants/languages";
+import { languages } from "../data/languages";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
@@ -34,7 +34,13 @@ function LanguageSwitcher() {
 
         {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
       </Button>
-      <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
+      <Menu
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+        transformOrigin={{ vertical: "top", horizontal: "left" }}
+      >
         {languages.map((language) => (
           <MenuItem
             key={language.name}

@@ -14,7 +14,6 @@ import ParticlesBackground from "./Components/ParticlesBackground";
 import "./styles/index.css";
 import TimelineDetails from "./Components/TimelineDetails";
 import { en, fr } from "make-plural/plurals";
-import { AppProvider } from "./AppContext";
 import ContactMe from "./Components/ContactMe";
 import AboutMe from "./Components/AboutMe";
 
@@ -59,26 +58,24 @@ const theme = createTheme({
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ParticlesBackground />
     <I18nProvider i18n={i18n}>
-      <AppProvider locale={i18n._locale}>
-        <ThemeProvider theme={theme}>
-          <BrowserRouter>
-            <Layout>
-              <Routes>
-                <Route path="/" element={<WelcomePage />} />
-                <Route path="timeline" element={<CustomTimeline />}>
-                  <Route path=":elementId" element={<TimelineDetails />} />
-                </Route>
-                <Route path="skills" element={<SkillsPreview />} />
-                <Route path="contact" element={<ContactMe />} />
-                <Route path="about" element={<AboutMe />} />
-                <Route path="*" element={<Navigate to="/" replace />} />
-              </Routes>
-            </Layout>
-          </BrowserRouter>
-        </ThemeProvider>
-      </AppProvider>
+      <ThemeProvider theme={theme}>
+        <BrowserRouter>
+          <ParticlesBackground />
+          <Layout>
+            <Routes>
+              <Route path="/" element={<WelcomePage />} />
+              <Route path="timeline" element={<CustomTimeline />}>
+                <Route path=":elementId" element={<TimelineDetails />} />
+              </Route>
+              <Route path="skills" element={<SkillsPreview />} />
+              <Route path="contact" element={<ContactMe />} />
+              <Route path="about" element={<AboutMe />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+          </Layout>
+        </BrowserRouter>
+      </ThemeProvider>
     </I18nProvider>
   </React.StrictMode>
 );
