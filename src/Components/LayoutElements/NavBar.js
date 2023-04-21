@@ -50,7 +50,7 @@ function NavBar() {
 
   return (
     <React.Fragment>
-      <Box sx={{ backgroundColor: "navBarBackground.main", opacity: "0.8" }}>
+      <Box sx={{ backgroundColor: "secondary.main", opacity: "0.8" }}>
         <Toolbar
           sx={{
             display: "flex",
@@ -86,20 +86,16 @@ function NavBar() {
               }}
             >
               {pages.map((page, index) => (
-                <React.Fragment key={index}>
-                  <MenuItem component={Link} to={page.path}>
-                    <Typography variant="h6" sx={{ color: "primary.main" }}>
-                      {page.name}
-                    </Typography>
-                  </MenuItem>
-                  {index !== pages.length - 1 && (
-                    <Divider
-                      orientation="horizontal"
-                      sx={{ backgroundColor: "primary.main", opacity: "0.5" }}
-                      flexItem
-                    />
-                  )}
-                </React.Fragment>
+                <MenuItem
+                  component={Link}
+                  to={page.path}
+                  divider={index !== pages.length - 1}
+                  key={index}
+                >
+                  <Typography variant="h6" sx={{ color: "primary.main" }}>
+                    {page.name}
+                  </Typography>
+                </MenuItem>
               ))}
             </Menu>
           </Box>

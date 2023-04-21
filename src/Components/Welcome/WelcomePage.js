@@ -31,7 +31,7 @@ function WelcomePage() {
           >{t`Welcome to my portfolio !`}</Typography>
           <Box
             sx={{
-              backgroundColor: "navBarBackground.main",
+              backgroundColor: "secondary.main",
               boxShadow: 1,
               borderRadius: "1rem",
               padding: "1rem",

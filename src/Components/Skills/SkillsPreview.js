@@ -44,9 +44,15 @@ function SkillsPreview() {
             width={"100%"}
           >
             <Box width={"100%"}>
-              <Typography variant="h6" color={"primary.main"}>
+              <Typography
+                variant="h6"
+                color={"primary.main"}
+                textAlign={"center"}
+              >
                 Soft skills
               </Typography>
+
+              <Divider flexItem />
               <Box>
                 <List>
                   <ListItemButton component={Link} to={"/a"}>
@@ -59,10 +65,25 @@ function SkillsPreview() {
             </Box>
 
             <Divider orientation="vertical" flexItem />
+
             <Box width={"100%"}>
-              <Typography variant="h6" color={"primary.main"}>
+              <Typography
+                variant="h6"
+                color={"primary.main"}
+                textAlign={"center"}
+              >
                 Hard skills
               </Typography>
+              <Divider flexItem />
+              <Box>
+                <List>
+                  <ListItemButton component={Link} to={"/a"}>
+                    <Typography variant="body1" color={"primary.main"}>
+                      a
+                    </Typography>
+                  </ListItemButton>
+                </List>
+              </Box>
             </Box>
           </Stack>
         </Stack>

@@ -1,21 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import WelcomePage from "./Components/WelcomePage";
+import WelcomePage from "./Components/Welcome/WelcomePage";
 import { i18n } from "@lingui/core";
 import { I18nProvider } from "@lingui/react";
 import { messages as enMessages } from "./locales/en/messages";
 import { messages as frMessages } from "./locales/fr/messages";
 import { ThemeProvider, createTheme } from "@mui/material";
-import SkillsPreview from "./Components/SkillsPreview";
-import Layout from "./Components/Layout";
-import CustomTimeline from "./Components/CustomTimeline";
-import ParticlesBackground from "./Components/ParticlesBackground";
+import SkillsPreview from "./Components/Skills/SkillsPreview";
+import Layout from "./Components/LayoutElements/Layout";
+import CustomTimeline from "./Components/Timeline/CustomTimeline";
+import ParticlesBackground from "./Components/LayoutElements/ParticlesBackground";
 import "./styles/index.css";
-import TimelineDetails from "./Components/TimelineDetails";
+import TimelineDetails from "./Components/Timeline/TimelineDetails";
 import { en, fr } from "make-plural/plurals";
-import ContactMe from "./Components/ContactMe";
-import AboutMe from "./Components/AboutMe";
+import ContactMe from "./Components/Contact/ContactMe";
+import AboutMe from "./Components/About/AboutMe";
+import SkillsDetails from "./Components/Skills/SkillsDetails";
 
 i18n.load({
   en: enMessages,
@@ -35,10 +36,7 @@ const theme = createTheme({
       main: "#000000",
     },
     secondary: {
-      main: "#99df",
-    },
-    navBarBackground: {
-      main: "#99df",
+      main: "#9370DB",
     },
     white: {
       main: "#ffffff",
@@ -68,7 +66,9 @@ root.render(
               <Route path="timeline" element={<CustomTimeline />}>
                 <Route path=":elementId" element={<TimelineDetails />} />
               </Route>
-              <Route path="skills" element={<SkillsPreview />} />
+              <Route path="skills" element={<SkillsPreview />}>
+                <Route path=":elementId" element={<SkillsDetails />} />
+              </Route>
               <Route path="contact" element={<ContactMe />} />
               <Route path="about" element={<AboutMe />} />
               <Route path="*" element={<Navigate to="/" replace />} />

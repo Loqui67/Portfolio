@@ -1,19 +1,18 @@
 import React, { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import { defaultOptions } from "../data/particlesBackgroundConfig";
+import { links } from "../../data/particlesBackgroundConfig";
 
 const ParticlesBackground = () => {
   const containerRef = React.useRef(null);
 
   const particlesLoaded = useCallback(async (container) => {
     containerRef.current = container;
-    containerRef.current.plugins.get("emitters").array[0].play();
   }, []);
 
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine);
-    await engine.addPreset("custom", defaultOptions);
+    await engine.addPreset("custom", links);
   }, []);
 
   return (

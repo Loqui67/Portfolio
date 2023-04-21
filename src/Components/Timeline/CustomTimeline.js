@@ -10,7 +10,7 @@ import {
 } from "@mui/lab";
 import { Box, Stack, Typography } from "@mui/material";
 import { Link, Outlet, useParams } from "react-router-dom";
-import { elements as rawElements } from "../data/timelineElements";
+import { elements as rawElements } from "../../data/timelineElements";
 import { t } from "@lingui/macro";
 
 function CustomTimeline() {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, MenuItem, Menu, Typography } from "@mui/material";
 import { i18n } from "@lingui/core";
-import { languages } from "../data/languages";
+import { languages } from "../../data/languages";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
