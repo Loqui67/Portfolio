@@ -41,7 +41,8 @@ function SkillsPreview() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          width: "50%",
+          maxWidth: { xs: "100%", sm: "90%", md: "70%", lg: "60%" },
+          width: "1200px",
         }}
       >
         <Stack
@@ -54,7 +55,7 @@ function SkillsPreview() {
             {t`Skills`}
           </Typography>
           <Stack
-            direction="row"
+            direction={{ sm: "column", md: "row" }}
             spacing={1}
             fontWeight={"bold"}
             color={"white.main"}
@@ -70,7 +71,10 @@ function SkillsPreview() {
                 Soft skills
               </Typography>
 
-              <Divider flexItem />
+              <Divider
+                flexItem
+                orientation={{ sm: "horizontal", md: "vertical" }}
+              />
               <Box>
                 <List>
                   {skills.softskills.map((skill) => (
