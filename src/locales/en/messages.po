@@ -13,10 +13,17 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/Components/NavBar.js:98
-#: src/Components/NavBar.js:154
+#: src/Components/LayoutElements/NavBar.js:34
 msgid "About"
 msgstr "About me"
+
+#: src/data/skillsElements.js:57
+msgid "Adaptabilité"
+msgstr "Adaptability"
+
+#: src/data/skillsElements.js:49
+msgid "Autonomie"
+msgstr "Autonomy"
 
 #: src/data/timelineElements.js:43
 msgid "BacDate"
@@ -24,24 +31,35 @@ msgstr "2020-06"
 
 #: src/data/timelineElements.js:42
 msgid "BacDescription"
-msgstr ""
+msgstr "Scientific Baccalaureate, speciality SI (engineering science), obtained with European honours."
 
 #: src/data/timelineElements.js:41
 msgid "BacTitle"
-msgstr ""
+msgstr "Obtaining of the Baccalaureate"
 
-#: src/Components/CustomTimeline.js:72
+#: src/Components/Timeline/CustomTimeline.js:75
 msgid "Click on an event to learn more"
 msgstr "Click on an event to learn more"
 
-#: src/Components/NavBar.js:91
-#: src/Components/NavBar.js:145
+#: src/data/skillsElements.js:33
+msgid "Communication"
+msgstr "Communication"
+
+#: src/Components/LayoutElements/NavBar.js:38
 msgid "Contact"
 msgstr "Contact me"
 
-#: src/Components/ContactMe.js:180
+#: src/Components/Contact/ContactMe.js:189
 msgid "Contact Me"
 msgstr "Send me a message!"
+
+#: src/data/skillsElements.js:41
+msgid "Créativité"
+msgstr "Creativity"
+
+#: src/data/skillsElements.js:53
+msgid "Curiosité"
+msgstr "Curiosity"
 
 #: src/data/timelineElements.js:7
 msgid "EngeeneringSchoolDiplomaDate"
@@ -49,11 +67,11 @@ msgstr "2025-06"
 
 #: src/data/timelineElements.js:6
 msgid "EngeeneringSchoolDiplomaDescription"
-msgstr ""
+msgstr "Graduated with a degree in computer science."
 
 #: src/data/timelineElements.js:5
 msgid "EngeeneringSchoolDiplomaTitle"
-msgstr ""
+msgstr "Engineering degree in computer science"
 
 #: src/data/timelineElements.js:37
 msgid "EntryCesiDate"
@@ -61,34 +79,33 @@ msgstr "2020-09"
 
 #: src/data/timelineElements.js:36
 msgid "EntryCesiDescription"
-msgstr ""
+msgstr "I entered the CESI engineering school to study computer science engineering. A 5-year study program, with an integrated preparatory cycle."
 
 #: src/data/timelineElements.js:35
 msgid "EntryCesiTitle"
-msgstr ""
+msgstr "Entry to CESI engineering school"
 
-#: src/Components/ContactMe.js:150
+#: src/Components/Contact/ContactMe.js:157
 msgid "Error"
 msgstr "Error"
 
-#: src/Components/WelcomePage.js:27
+#: src/Components/Welcome/WelcomePage.js:27
 msgid "Hello !"
 msgstr "Hello!"
 
-#: src/Components/NavBar.js:69
-#: src/Components/NavBar.js:117
+#: src/Components/LayoutElements/NavBar.js:22
 msgid "Home"
 msgstr "Home"
 
-#: src/Components/Footer.js:22
+#: src/Components/LayoutElements/Footer.js:22
 msgid "I'm still working on this website, so please be patient :)"
 msgstr "I'm still working on this website, so please be patient :)"
 
-#: src/Components/WelcomePage.js:53
+#: src/Components/Welcome/WelcomePage.js:53
 msgid "Let's go !"
 msgstr "Let's go !"
 
-#: src/Components/ContactMe.js:93
+#: src/Components/Contact/ContactMe.js:98
 msgid "Message sent successfully!"
 msgstr "Message sent successfully!"
 
@@ -100,28 +117,64 @@ msgstr "Message sent successfully!"
 #~ msgid "MyTimeline"
 #~ msgstr "My background"
 
-#: src/Components/ContactMe.js:234
+#: src/Components/Contact/ContactMe.js:244
 msgid "Please enter a message."
 msgstr "Please enter a message."
 
-#: src/Components/ContactMe.js:203
+#: src/Components/Contact/ContactMe.js:212
 msgid "Please enter a name."
 msgstr "Please enter a name."
 
-#: src/Components/ContactMe.js:218
+#: src/Components/Contact/ContactMe.js:227
 msgid "Please enter a valid email."
 msgstr "Please enter a valid email."
 
-#: src/Components/ContactMe.js:75
+#: src/Components/Contact/ContactMe.js:77
 msgid "Please fill out the form correctly."
 msgstr "Please fill out the form correctly."
 
-#: src/Components/NavBar.js:77
-#: src/Components/NavBar.js:127
+#: src/data/skillsElements.js:45
+msgid "Rigueur"
+msgstr "Rigor"
+
+#: src/data/skillsElements.js:77
+msgid "Sens de l'analyse"
+msgstr "Sense of analysis"
+
+#: src/data/skillsElements.js:65
+msgid "Sens de l'initiative"
+msgstr "Taking initiative"
+
+#: src/data/skillsElements.js:61
+msgid "Sens de l'organisation"
+msgstr "Organization"
+
+#: src/data/skillsElements.js:81
+msgid "Sens de la gestion de projet"
+msgstr "Project management"
+
+#: src/data/skillsElements.js:85
+msgid "Sens de la gestion de stress"
+msgstr "Stress management"
+
+#: src/data/skillsElements.js:89
+msgid "Sens de la gestion de temps"
+msgstr "Time management"
+
+#: src/data/skillsElements.js:73
+msgid "Sens de la pédagogie"
+msgstr "Sense of education"
+
+#: src/data/skillsElements.js:69
+msgid "Sens de la responsabilité"
+msgstr "Responsible"
+
+#: src/Components/LayoutElements/NavBar.js:26
+#: src/Components/Skills/SkillsPreview.js:54
 msgid "Skills"
 msgstr "My skills"
 
-#: src/Components/ContactMe.js:111
+#: src/Components/Contact/ContactMe.js:118
 msgid "Something went wrong. Please try again later."
 msgstr "Something went wrong. Please try again later."
 
@@ -131,11 +184,11 @@ msgstr "2022-04 / 2022-07"
 
 #: src/data/timelineElements.js:30
 msgid "StageA2Description"
-msgstr ""
+msgstr "A 4 months internship at Alcatel-Lucent to discover the business world, and more particularly the world of automated tests. I was able to write different automated tests in Java, and discover the Selenium framework. I also discovered the world of DevOps, and more particularly the CI/CD. During this internship, I developed a dashboard in React, NodeJS and MySQL, allowing to display the results of the tests."
 
 #: src/data/timelineElements.js:29
 msgid "StageA2Title"
-msgstr ""
+msgstr "2nd year internship"
 
 #: src/data/timelineElements.js:25
 msgid "StageA3Date"
@@ -143,11 +196,11 @@ msgstr "2023-01 / 2023-04"
 
 #: src/data/timelineElements.js:24
 msgid "StageA3Description"
-msgstr ""
+msgstr "A 3 months internship at Thinkfab as a React developer. I got an enriching experience and new knowledge in React libraries, such as Redux."
 
 #: src/data/timelineElements.js:23
 msgid "StageA3Title"
-msgstr ""
+msgstr "3rd year internship"
 
 #: src/data/timelineElements.js:19
 msgid "StageA4Date"
@@ -155,11 +208,11 @@ msgstr "2023-09 / 2024-01"
 
 #: src/data/timelineElements.js:18
 msgid "StageA4Description"
-msgstr ""
+msgstr "4th year internship, in a foreign country, as part of the studies"
 
 #: src/data/timelineElements.js:17
 msgid "StageA4Title"
-msgstr ""
+msgstr "4th year internship, in a foreign country"
 
 #: src/data/timelineElements.js:13
 msgid "StageA5Date"
@@ -167,22 +220,29 @@ msgstr "Unknown"
 
 #: src/data/timelineElements.js:12
 msgid "StageA5Description"
-msgstr ""
+msgstr "An internship concluding the studies"
 
 #: src/data/timelineElements.js:11
 msgid "StageA5Title"
-msgstr ""
+msgstr "End of study internship (5th year)"
 
-#: src/Components/ContactMe.js:150
+#: src/Components/Contact/ContactMe.js:157
 msgid "Success"
 msgstr "Success"
 
-#: src/Components/NavBar.js:84
-#: src/Components/NavBar.js:136
+#: src/data/skillsElements.js:152
+msgid "Système d'informations"
+msgstr "Information system"
+
+#: src/Components/LayoutElements/NavBar.js:30
 msgid "Timeline"
 msgstr "My background"
 
-#: src/Components/WelcomePage.js:31
+#: src/data/skillsElements.js:37
+msgid "Travail d'équipe"
+msgstr "Teamwork"
+
+#: src/Components/Welcome/WelcomePage.js:31
 msgid "Welcome to my portfolio !"
 msgstr "Welcome to my portfolio!"
 
@@ -192,8 +252,12 @@ msgstr "2017-09 / 2020-06"
 
 #: src/data/timelineElements.js:48
 msgid "highschoolDescription"
-msgstr ""
+msgstr "General stream S - SI (engineering science), specializing in SI"
 
 #: src/data/timelineElements.js:47
 msgid "highschoolTitle"
 msgstr "Freppel High School"
+
+#: src/data/skillsElements.js:148
+msgid "réseau"
+msgstr "Network architecture"

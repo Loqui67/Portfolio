@@ -16,7 +16,6 @@ import TimelineDetails from "./Components/Timeline/TimelineDetails";
 import { en, fr } from "make-plural/plurals";
 import ContactMe from "./Components/Contact/ContactMe";
 import AboutMe from "./Components/About/AboutMe";
-import SkillsDetails from "./Components/Skills/SkillsDetails";
 
 i18n.load({
   en: enMessages,
@@ -66,9 +65,8 @@ root.render(
               <Route path="timeline" element={<CustomTimeline />}>
                 <Route path=":elementId" element={<TimelineDetails />} />
               </Route>
-              <Route path="skills" element={<SkillsPreview />}>
-                <Route path=":elementId" element={<SkillsDetails />} />
-              </Route>
+              <Route path="skills" element={<SkillsPreview />} />
+
               <Route path="contact" element={<ContactMe />} />
               <Route path="about" element={<AboutMe />} />
               <Route path="*" element={<Navigate to="/" replace />} />

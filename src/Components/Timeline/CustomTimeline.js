@@ -14,8 +14,11 @@ import { elements as rawElements } from "../../data/timelineElements";
 import { t } from "@lingui/macro";
 
 function CustomTimeline() {
-  const [elements, setElements] = useState([]);
   const { elementId } = useParams();
+  const [elements, setElements] = useState([]);
+  const [selectedElement, setSelectedElement] = useState(
+    elements.find((element) => element.id === elementId)
+  );
 
   useEffect(() => {
     const filteredElements = rawElements().map((element) => {
@@ -86,7 +89,12 @@ function CustomTimeline() {
                   <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent>
-                  <Link to={element.id}>
+                  <Link
+                    to={element.id}
+                    onClick={() => {
+                      setSelectedElement(element);
+                    }}
+                  >
                     <Typography variant="h6" sx={{ color: "primary.main" }}>
                       {element.title}
                     </Typography>
@@ -97,7 +105,7 @@ function CustomTimeline() {
           </Timeline>
         </Box>
 
-        <Outlet context={elements[elementId]} />
+        <Outlet context={selectedElement} />
       </Stack>
     </React.Fragment>
   );

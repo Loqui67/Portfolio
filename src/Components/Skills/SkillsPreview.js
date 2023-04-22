@@ -2,14 +2,33 @@ import {
   Box,
   Divider,
   List,
-  ListItemButton,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
   Stack,
   Typography,
 } from "@mui/material";
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { hardskills, softskills } from "../../data/skillsElements";
+import { t } from "@lingui/macro";
 
 function SkillsPreview() {
+  const [skills, setSkills] = useState({ hardskills, softskills });
+
+  useEffect(() => {
+    const filteredSkills = { hardskills, softskills };
+    Object.entries(filteredSkills).forEach(([key, value]) => {
+      filteredSkills[key] = value.map((skill) => {
+        const newSkill = {};
+        Object.entries(skill).forEach(([key, value]) => {
+          newSkill[key] = typeof value === "function" ? value() : value;
+        });
+        return newSkill;
+      });
+    });
+    setSkills(filteredSkills);
+  }, []);
+
   return (
     <React.Fragment>
       <Box
@@ -32,14 +51,13 @@ function SkillsPreview() {
           width={"100%"}
         >
           <Typography variant="h4" sx={{ color: "primary.main" }}>
-            Skills
+            {t`Skills`}
           </Typography>
           <Stack
             direction="row"
             spacing={1}
             fontWeight={"bold"}
             color={"white.main"}
-            alignItems={"center"}
             justifyContent={"space-evenly"}
             width={"100%"}
           >
@@ -55,11 +73,22 @@ function SkillsPreview() {
               <Divider flexItem />
               <Box>
                 <List>
-                  <ListItemButton component={Link} to={"/a"}>
-                    <Typography variant="body1" color={"primary.main"}>
-                      a
-                    </Typography>
-                  </ListItemButton>
+                  {skills.softskills.map((skill) => (
+                    <ListItem>
+                      <ListItemIcon>{skill.icon}</ListItemIcon>
+                      <ListItemText key={skill.id}>
+                        <Stack
+                          direction={"row"}
+                          alignItems={"center"}
+                          spacing={1}
+                        >
+                          <Typography variant="body1" color={"primary.main"}>
+                            {skill.title}
+                          </Typography>
+                        </Stack>
+                      </ListItemText>
+                    </ListItem>
+                  ))}
                 </List>
               </Box>
             </Box>
@@ -77,11 +106,22 @@ function SkillsPreview() {
               <Divider flexItem />
               <Box>
                 <List>
-                  <ListItemButton component={Link} to={"/a"}>
-                    <Typography variant="body1" color={"primary.main"}>
-                      a
-                    </Typography>
-                  </ListItemButton>
+                  {skills.hardskills.map((skill) => (
+                    <ListItem>
+                      <ListItemIcon>{skill.icon}</ListItemIcon>
+                      <ListItemText key={skill.id}>
+                        <Stack
+                          direction={"row"}
+                          alignItems={"center"}
+                          spacing={1}
+                        >
+                          <Typography variant="body1" color={"primary.main"}>
+                            {skill.title}
+                          </Typography>
+                        </Stack>
+                      </ListItemText>
+                    </ListItem>
+                  ))}
                 </List>
               </Box>
             </Box>

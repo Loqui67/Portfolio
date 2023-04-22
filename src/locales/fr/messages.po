@@ -13,10 +13,17 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/Components/NavBar.js:98
-#: src/Components/NavBar.js:154
+#: src/Components/LayoutElements/NavBar.js:34
 msgid "About"
 msgstr "A propos de moi"
+
+#: src/data/skillsElements.js:57
+msgid "Adaptabilité"
+msgstr "Adaptabilité"
+
+#: src/data/skillsElements.js:49
+msgid "Autonomie"
+msgstr "Autonomie"
 
 #: src/data/timelineElements.js:43
 msgid "BacDate"
@@ -24,24 +31,35 @@ msgstr "06/2020"
 
 #: src/data/timelineElements.js:42
 msgid "BacDescription"
-msgstr "Baccalauréat Scientifique, spécialité SI, optenu avec mention assez bien européenne."
+msgstr "Baccalauréat Scientifique, spécialité SI, obtenu avec mention assez bien européenne."
 
 #: src/data/timelineElements.js:41
 msgid "BacTitle"
 msgstr "Obtention du Baccalauréat"
 
-#: src/Components/CustomTimeline.js:72
+#: src/Components/Timeline/CustomTimeline.js:75
 msgid "Click on an event to learn more"
 msgstr "Cliquez sur un événement pour en savoir plus"
 
-#: src/Components/NavBar.js:91
-#: src/Components/NavBar.js:145
+#: src/data/skillsElements.js:33
+msgid "Communication"
+msgstr "Communication"
+
+#: src/Components/LayoutElements/NavBar.js:38
 msgid "Contact"
 msgstr "Me contacter"
 
-#: src/Components/ContactMe.js:180
+#: src/Components/Contact/ContactMe.js:189
 msgid "Contact Me"
 msgstr "Envoie-moi un message !"
+
+#: src/data/skillsElements.js:41
+msgid "Créativité"
+msgstr "Créativité"
+
+#: src/data/skillsElements.js:53
+msgid "Curiosité"
+msgstr "Curiosité"
 
 #: src/data/timelineElements.js:7
 msgid "EngeeneringSchoolDiplomaDate"
@@ -67,28 +85,27 @@ msgstr "Mon entrée à l'école d'ingénieur CESI, pour y suivre une formation d
 msgid "EntryCesiTitle"
 msgstr "Entrée à l'école d'ingénieur CESI"
 
-#: src/Components/ContactMe.js:150
+#: src/Components/Contact/ContactMe.js:157
 msgid "Error"
 msgstr "Erreur"
 
-#: src/Components/WelcomePage.js:27
+#: src/Components/Welcome/WelcomePage.js:27
 msgid "Hello !"
 msgstr "Salut !"
 
-#: src/Components/NavBar.js:69
-#: src/Components/NavBar.js:117
+#: src/Components/LayoutElements/NavBar.js:22
 msgid "Home"
 msgstr "Accueil"
 
-#: src/Components/Footer.js:22
+#: src/Components/LayoutElements/Footer.js:22
 msgid "I'm still working on this website, so please be patient :)"
 msgstr "Je travaille encore sur ce site, alors soyez patients :)"
 
-#: src/Components/WelcomePage.js:53
+#: src/Components/Welcome/WelcomePage.js:53
 msgid "Let's go !"
 msgstr "C'est parti !"
 
-#: src/Components/ContactMe.js:93
+#: src/Components/Contact/ContactMe.js:98
 msgid "Message sent successfully!"
 msgstr "Le message a bien été envoyé !"
 
@@ -100,28 +117,64 @@ msgstr "Le message a bien été envoyé !"
 #~ msgid "MyTimeline"
 #~ msgstr "Mon parcours"
 
-#: src/Components/ContactMe.js:234
+#: src/Components/Contact/ContactMe.js:244
 msgid "Please enter a message."
 msgstr "Merci d'entrer un message."
 
-#: src/Components/ContactMe.js:203
+#: src/Components/Contact/ContactMe.js:212
 msgid "Please enter a name."
 msgstr "Merci d'entrer un nom."
 
-#: src/Components/ContactMe.js:218
+#: src/Components/Contact/ContactMe.js:227
 msgid "Please enter a valid email."
 msgstr "Merci d'entrer une adresse email valide."
 
-#: src/Components/ContactMe.js:75
+#: src/Components/Contact/ContactMe.js:77
 msgid "Please fill out the form correctly."
 msgstr "Merci de remplir le formulaire correctement."
 
-#: src/Components/NavBar.js:77
-#: src/Components/NavBar.js:127
+#: src/data/skillsElements.js:45
+msgid "Rigueur"
+msgstr "Rigueur"
+
+#: src/data/skillsElements.js:77
+msgid "Sens de l'analyse"
+msgstr "Sens de l'analyse"
+
+#: src/data/skillsElements.js:65
+msgid "Sens de l'initiative"
+msgstr "Prise d'initiatives"
+
+#: src/data/skillsElements.js:61
+msgid "Sens de l'organisation"
+msgstr "Organisation"
+
+#: src/data/skillsElements.js:81
+msgid "Sens de la gestion de projet"
+msgstr "Gestion de projet"
+
+#: src/data/skillsElements.js:85
+msgid "Sens de la gestion de stress"
+msgstr "Gestion du stress"
+
+#: src/data/skillsElements.js:89
+msgid "Sens de la gestion de temps"
+msgstr "Gestion du temps"
+
+#: src/data/skillsElements.js:73
+msgid "Sens de la pédagogie"
+msgstr "Sens de la pédagogie"
+
+#: src/data/skillsElements.js:69
+msgid "Sens de la responsabilité"
+msgstr "Responsable"
+
+#: src/Components/LayoutElements/NavBar.js:26
+#: src/Components/Skills/SkillsPreview.js:54
 msgid "Skills"
 msgstr "Mes compétences"
 
-#: src/Components/ContactMe.js:111
+#: src/Components/Contact/ContactMe.js:118
 msgid "Something went wrong. Please try again later."
 msgstr "Quelque chose s'est mal passé. Merci de réessayer plus tard."
 
@@ -173,16 +226,23 @@ msgstr "Un stage concluant les études"
 msgid "StageA5Title"
 msgstr "Stage de fin d'étude (5ème année)"
 
-#: src/Components/ContactMe.js:150
+#: src/Components/Contact/ContactMe.js:157
 msgid "Success"
 msgstr "Succès"
 
-#: src/Components/NavBar.js:84
-#: src/Components/NavBar.js:136
+#: src/data/skillsElements.js:152
+msgid "Système d'informations"
+msgstr "Système d'informations"
+
+#: src/Components/LayoutElements/NavBar.js:30
 msgid "Timeline"
 msgstr "Mon parcours"
 
-#: src/Components/WelcomePage.js:31
+#: src/data/skillsElements.js:37
+msgid "Travail d'équipe"
+msgstr "Travail d'équipe"
+
+#: src/Components/Welcome/WelcomePage.js:31
 msgid "Welcome to my portfolio !"
 msgstr "Bienvenue sur mon portfolio !"
 
@@ -197,3 +257,7 @@ msgstr "Fillière générale S - SI (science de l'ingénieur), spécialité SI"
 #: src/data/timelineElements.js:47
 msgid "highschoolTitle"
 msgstr "Lycée Freppel"
+
+#: src/data/skillsElements.js:148
+msgid "réseau"
+msgstr "Architecture réseau"
