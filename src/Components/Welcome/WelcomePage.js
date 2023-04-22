@@ -30,7 +30,7 @@ function WelcomePage() {
                   direction="row"
                   spacing={1}
                   fontWeight={"bold"}
-                  color={"white"}
+                  color={"white.main"}
                   alignItems={"center"}
                 >
                   <Typography
