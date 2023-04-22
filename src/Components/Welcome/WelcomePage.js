@@ -13,6 +13,7 @@ function WelcomePage() {
         alignItems="center"
         sx={{
           color: "primary.main",
+          maxWidth: { xs: "90%", sm: "80%", md: "60%", lg: "50%" },
         }}
       >
         <Stack

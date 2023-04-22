@@ -41,7 +41,7 @@ function SkillsPreview() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          maxWidth: { xs: "100%", sm: "90%", md: "70%", lg: "60%" },
+          maxWidth: { xs: "90%", sm: "80%", md: "60%", lg: "50%" },
           width: "1200px",
         }}
       >

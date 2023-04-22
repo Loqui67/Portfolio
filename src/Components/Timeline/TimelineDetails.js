@@ -24,7 +24,7 @@ function TimelineDetails() {
           boxShadow: 1,
           borderRadius: "1rem",
           padding: "1rem",
-          width: "50%",
+          width: { xs: "90%", sm: "80%", md: "60%", lg: "50%" },
         }}
       >
         <Typography variant="h4" sx={{ color: "primary.main" }}>

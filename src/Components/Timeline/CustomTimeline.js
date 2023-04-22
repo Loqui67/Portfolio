@@ -51,7 +51,7 @@ function CustomTimeline() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            minHeight: "calc(100vh - 200px)",
+            maxWidth: { xs: "100%", sm: "90%", md: "70%", lg: "60%" },
           }}
         >
           <Timeline>
@@ -95,7 +95,7 @@ function CustomTimeline() {
                       setSelectedElement(element);
                     }}
                   >
-                    <Typography variant="h6" sx={{ color: "primary.main" }}>
+                    <Typography sx={{ color: "primary.main" }}>
                       {element.title}
                     </Typography>
                   </Link>

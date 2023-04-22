@@ -183,7 +183,7 @@ const ContactMe = () => {
             borderRadius: "1rem",
             padding: "1rem",
             width: "1200px",
-            maxWidth: { xs: "100%", sm: "90%", md: "70%", lg: "60%" },
+            maxWidth: { xs: "90%", sm: "80%", md: "60%", lg: "50%" },
           }}
         >
           <Typography variant="h4" gutterBottom>{t`Contact Me`}</Typography>
