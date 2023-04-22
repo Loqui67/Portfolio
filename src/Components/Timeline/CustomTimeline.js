@@ -8,10 +8,11 @@ import {
   TimelineDot,
   TimelineOppositeContent,
 } from "@mui/lab";
-import { Box, Stack, Typography } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import { Link, Outlet, useParams } from "react-router-dom";
 import { elements as rawElements } from "../../data/timelineElements";
 import { t } from "@lingui/macro";
+import CustomBox from "../MuiCustomComponents/CustomBox";
 
 function CustomTimeline() {
   const { elementId } = useParams();
@@ -41,19 +42,7 @@ function CustomTimeline() {
         alignItems="center"
         width="100%"
       >
-        <Box
-          sx={{
-            backgroundColor: "white.main",
-            opacity: "0.8",
-            boxShadow: 1,
-            borderRadius: "1rem",
-            padding: "1rem",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            maxWidth: { xs: "100%", sm: "90%", md: "70%", lg: "60%" },
-          }}
-        >
+        <CustomBox whiteBox responsive centered>
           <Timeline>
             <TimelineItem>
               <TimelineOppositeContent />
@@ -66,8 +55,7 @@ function CustomTimeline() {
                   display={"block"}
                   variant="subtitle1"
                   sx={{
-                    color: "primary.main",
-                    opacity: "0.8",
+                    opacity: "0.5",
                     alignItems: "center",
                     paddingLeft: "0.5rem",
                   }}
@@ -95,15 +83,13 @@ function CustomTimeline() {
                       setSelectedElement(element);
                     }}
                   >
-                    <Typography sx={{ color: "primary.main" }}>
-                      {element.title}
-                    </Typography>
+                    <Typography color={"primary"}>{element.title}</Typography>
                   </Link>
                 </TimelineContent>
               </TimelineItem>
             ))}
           </Timeline>
-        </Box>
+        </CustomBox>
 
         <Outlet context={selectedElement} />
       </Stack>

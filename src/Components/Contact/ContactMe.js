@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-  Box,
   Button,
   TextField,
   Typography,
@@ -11,6 +10,7 @@ import {
 } from "@mui/material";
 import { t } from "@lingui/macro";
 import axios from "axios";
+import CustomBox from "../MuiCustomComponents/CustomBox";
 
 const ContactMe = () => {
   const [userInfo, setUserInfo] = useState({
@@ -136,12 +136,10 @@ const ContactMe = () => {
       return null;
     }
     return (
-      <Box
+      <CustomBox
+        responsive
         sx={{
           zIndex: "1000",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
         }}
       >
         <Alert
@@ -157,38 +155,23 @@ const ContactMe = () => {
           <AlertTitle>{type === "success" ? t`Success` : t`Error`}</AlertTitle>
           {message}
         </Alert>
-      </Box>
+      </CustomBox>
     );
   };
 
   return (
     <React.Fragment>
-      <Box
+      <CustomBox
+        whiteBox
+        responsive
         sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          width: "100%",
-          height: "100%",
+          width: "1200px",
         }}
       >
-        <Stack
-          direction="column"
-          spacing={1}
-          alignItems={"center"}
-          sx={{
-            backgroundColor: "white.main",
-            opacity: "0.8",
-            boxShadow: 1,
-            borderRadius: "1rem",
-            padding: "1rem",
-            width: "1200px",
-            maxWidth: { xs: "90%", sm: "80%", md: "60%", lg: "50%" },
-          }}
-        >
+        <Stack direction="column" spacing={1} alignItems={"center"}>
           <Typography variant="h4" gutterBottom>{t`Contact Me`}</Typography>
           {renderAlert()}
-          <Box
+          <CustomBox
             component="form"
             noValidate
             sx={{
@@ -253,9 +236,9 @@ const ContactMe = () => {
                 Submit
               </Button>
             </FormGroup>
-          </Box>
+          </CustomBox>
         </Stack>
-      </Box>
+      </CustomBox>
     </React.Fragment>
   );
 };

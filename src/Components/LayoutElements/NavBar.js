@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
   Toolbar,
   Typography,
-  Box,
   Grid,
   Menu,
   MenuItem,
@@ -13,6 +12,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { t } from "@lingui/macro";
 import { Link } from "react-router-dom";
+import CustomBox from "../MuiCustomComponents/CustomBox";
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -23,16 +23,16 @@ function NavBar() {
       path: "/",
     },
     {
+      name: t`About`,
+      path: "/about",
+    },
+    {
       name: t`Skills`,
       path: "/skills",
     },
     {
       name: t`Timeline`,
       path: "/timeline",
-    },
-    {
-      name: t`About`,
-      path: "/about",
     },
     {
       name: t`Contact`,
@@ -50,7 +50,7 @@ function NavBar() {
 
   return (
     <React.Fragment>
-      <Box sx={{ backgroundColor: "secondary.main", opacity: "0.8" }}>
+      <CustomBox sx={{ backgroundColor: "secondary.main", opacity: "0.8" }}>
         <Toolbar
           sx={{
             display: "flex",
@@ -58,7 +58,7 @@ function NavBar() {
             alignItems: "center",
           }}
         >
-          <Box sx={{ display: { xs: "flex", md: "none" } }}>
+          <CustomBox sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -92,14 +92,14 @@ function NavBar() {
                   divider={index !== pages.length - 1}
                   key={index}
                 >
-                  <Typography variant="h6" sx={{ color: "primary.main" }}>
+                  <Typography variant="h6" color={"primary"}>
                     {page.name}
                   </Typography>
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
-          <Box sx={{ width: { md: "90%", lg: "60%" } }}>
+          </CustomBox>
+          <CustomBox sx={{ width: { md: "90%", lg: "60%" } }}>
             <Grid
               container
               sx={{
@@ -112,7 +112,7 @@ function NavBar() {
                 <React.Fragment key={index}>
                   <Grid item>
                     <Link to={page.path}>
-                      <Typography variant="h6" sx={{ color: "primary.main" }}>
+                      <Typography variant="h6" color={"primary"}>
                         {page.name}
                       </Typography>
                     </Link>
@@ -127,10 +127,10 @@ function NavBar() {
                 </React.Fragment>
               ))}
             </Grid>
-          </Box>
+          </CustomBox>
           <LanguageSwitcher />
         </Toolbar>
-      </Box>
+      </CustomBox>
     </React.Fragment>
   );
 }

@@ -1,5 +1,4 @@
 import {
-  Box,
   Divider,
   List,
   ListItem,
@@ -11,6 +10,7 @@ import {
 import React, { useState, useEffect } from "react";
 import { hardskills, softskills } from "../../data/skillsElements";
 import { t } from "@lingui/macro";
+import CustomBox from "../MuiCustomComponents/CustomBox";
 
 function SkillsPreview() {
   const [skills, setSkills] = useState({ hardskills, softskills });
@@ -31,17 +31,11 @@ function SkillsPreview() {
 
   return (
     <React.Fragment>
-      <Box
+      <CustomBox
+        whiteBox
+        responsive
+        centered
         sx={{
-          backgroundColor: "white.main",
-          opacity: "0.8",
-          boxShadow: 1,
-          borderRadius: "1rem",
-          padding: "1rem",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          maxWidth: { xs: "90%", sm: "80%", md: "60%", lg: "50%" },
           width: "1200px",
         }}
       >
@@ -51,23 +45,19 @@ function SkillsPreview() {
           alignItems={"center"}
           width={"100%"}
         >
-          <Typography variant="h4" sx={{ color: "primary.main" }}>
+          <Typography variant="h4" color={"primary"}>
             {t`Skills`}
           </Typography>
           <Stack
             direction={{ sm: "column", md: "row" }}
             spacing={1}
             fontWeight={"bold"}
-            color={"white.main"}
+            color={"white"}
             justifyContent={"space-evenly"}
             width={"100%"}
           >
-            <Box width={"100%"}>
-              <Typography
-                variant="h6"
-                color={"primary.main"}
-                textAlign={"center"}
-              >
+            <CustomBox width={"100%"}>
+              <Typography variant="h6" color={"primary"} textAlign={"center"}>
                 Soft skills
               </Typography>
 
@@ -75,7 +65,7 @@ function SkillsPreview() {
                 flexItem
                 orientation={{ sm: "horizontal", md: "vertical" }}
               />
-              <Box>
+              <CustomBox>
                 <List>
                   {skills.softskills.map((skill) => (
                     <ListItem>
@@ -86,7 +76,7 @@ function SkillsPreview() {
                           alignItems={"center"}
                           spacing={1}
                         >
-                          <Typography variant="body1" color={"primary.main"}>
+                          <Typography variant="body1" color={"primary"}>
                             {skill.title}
                           </Typography>
                         </Stack>
@@ -94,21 +84,17 @@ function SkillsPreview() {
                     </ListItem>
                   ))}
                 </List>
-              </Box>
-            </Box>
+              </CustomBox>
+            </CustomBox>
 
             <Divider orientation="vertical" flexItem />
 
-            <Box width={"100%"}>
-              <Typography
-                variant="h6"
-                color={"primary.main"}
-                textAlign={"center"}
-              >
+            <CustomBox width={"100%"}>
+              <Typography variant="h6" color={"primary"} textAlign={"center"}>
                 Hard skills
               </Typography>
               <Divider flexItem />
-              <Box>
+              <CustomBox>
                 <List>
                   {skills.hardskills.map((skill) => (
                     <ListItem>
@@ -119,7 +105,7 @@ function SkillsPreview() {
                           alignItems={"center"}
                           spacing={1}
                         >
-                          <Typography variant="body1" color={"primary.main"}>
+                          <Typography variant="body1" color={"primary"}>
                             {skill.title}
                           </Typography>
                         </Stack>
@@ -127,11 +113,11 @@ function SkillsPreview() {
                     </ListItem>
                   ))}
                 </List>
-              </Box>
-            </Box>
+              </CustomBox>
+            </CustomBox>
           </Stack>
         </Stack>
-      </Box>
+      </CustomBox>
     </React.Fragment>
   );
 }

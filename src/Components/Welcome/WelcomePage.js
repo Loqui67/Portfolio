@@ -1,36 +1,21 @@
 import React from "react";
 import { t } from "@lingui/macro";
 import { Link } from "react-router-dom";
-import { Box, Button, Stack, Typography } from "@mui/material";
+import { Button, Stack, Typography } from "@mui/material";
 import { ArrowForward } from "@mui/icons-material";
+import CustomBox from "../MuiCustomComponents/CustomBox";
 
 function WelcomePage() {
   return (
     <React.Fragment>
-      <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        sx={{
-          color: "primary.main",
-          maxWidth: { xs: "90%", sm: "80%", md: "60%", lg: "50%" },
-        }}
-      >
-        <Stack
-          sx={{
-            backgroundColor: "white.main",
-            opacity: "0.8",
-            boxShadow: 1,
-            borderRadius: "1rem",
-            padding: "1rem",
-          }}
-        >
+      <CustomBox whiteBox responsive centered>
+        <Stack>
           <Typography variant="h1">{t`Hello !`}</Typography>
           <Typography
             variant="h2"
             gutterBottom
           >{t`Welcome to my portfolio !`}</Typography>
-          <Box
+          <CustomBox
             sx={{
               backgroundColor: "secondary.main",
               boxShadow: 1,
@@ -45,7 +30,7 @@ function WelcomePage() {
                   direction="row"
                   spacing={1}
                   fontWeight={"bold"}
-                  color={"white.main"}
+                  color={"white"}
                   alignItems={"center"}
                 >
                   <Typography
@@ -56,9 +41,9 @@ function WelcomePage() {
                 </Stack>
               </Link>
             </Button>
-          </Box>
+          </CustomBox>
         </Stack>
-      </Box>
+      </CustomBox>
     </React.Fragment>
   );
 }

@@ -18,7 +18,7 @@ function Footer() {
           }}
         >
           <Grid item>
-            <Typography variant="subtitle1" sx={{ color: "secondary.main" }}>
+            <Typography variant="subtitle1" color={"secondary"}>
               {t`I'm still working on this website, so please be patient :)`}
             </Typography>
           </Grid>
@@ -28,25 +28,25 @@ function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <GitHubIcon sx={{ color: "secondary.main" }} />
+              <GitHubIcon color={"secondary"} />
             </IconButton>
             <IconButton
               href="https://www.linkedin.com/in/loicwalter/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <LinkedInIcon sx={{ color: "secondary.main" }} />
+              <LinkedInIcon color={"secondary"} />
             </IconButton>
             <IconButton
               href="mailto:loicwalter88@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <MailIcon sx={{ color: "secondary.main" }} />
+              <MailIcon color={"secondary"} />
             </IconButton>
           </Grid>
           <Grid item>
-            <Typography variant="subtitle1" sx={{ color: "secondary.main" }}>
+            <Typography variant="subtitle1" color={"secondary"}>
               © 2023 Loïc Walter
             </Typography>
           </Grid>
