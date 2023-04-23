@@ -16,7 +16,7 @@ function Layout({ children }) {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            marginBlock: "5vh",
+            marginBlock: "3vh",
             flexGrow: 1,
             width: "100%",
           }}

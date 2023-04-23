@@ -8,7 +8,13 @@ import { t } from "@lingui/macro";
 function Footer() {
   return (
     <React.Fragment>
-      <Toolbar sx={{ backgroundColor: "primary.main", opacity: "0.8" }}>
+      <Toolbar
+        sx={{
+          backgroundColor: "primary.main",
+          opacity: "0.8",
+          color: "secondary.main",
+        }}
+      >
         <Grid
           container
           sx={{
@@ -18,7 +24,7 @@ function Footer() {
           }}
         >
           <Grid item>
-            <Typography variant="subtitle1" color={"secondary"}>
+            <Typography variant="subtitle1">
               {t`I'm still working on this website, so please be patient :)`}
             </Typography>
           </Grid>
@@ -46,9 +52,7 @@ function Footer() {
             </IconButton>
           </Grid>
           <Grid item>
-            <Typography variant="subtitle1" color={"secondary"}>
-              © 2023 Loïc Walter
-            </Typography>
+            <Typography variant="subtitle1">© 2023 Loïc Walter</Typography>
           </Grid>
         </Grid>
       </Toolbar>

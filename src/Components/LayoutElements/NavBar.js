@@ -7,6 +7,7 @@ import {
   MenuItem,
   IconButton,
   Divider,
+  Button,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -50,7 +51,10 @@ function NavBar() {
 
   return (
     <React.Fragment>
-      <CustomBox sx={{ backgroundColor: "secondary.main", opacity: "0.8" }}>
+      <CustomBox
+        borderBottom={"solid thin rgba(255, 255, 255, .1)"}
+        backgroundColor={"rgba(255, 255, 255, .1)"}
+      >
         <Toolbar
           sx={{
             display: "flex",
@@ -99,30 +103,44 @@ function NavBar() {
               ))}
             </Menu>
           </CustomBox>
-          <CustomBox sx={{ width: { md: "90%", lg: "60%" } }}>
+          <CustomBox>
             <Grid
               container
+              columnSpacing={{ md: 1, lg: 2, xl: 3 }}
               sx={{
                 display: { xs: "none", md: "flex" },
-                justifyContent: "space-evenly",
                 alignItems: "center",
               }}
+              ml={{ md: 1, lg: 2 }}
             >
               {pages.map((page, index) => (
                 <React.Fragment key={index}>
                   <Grid item>
-                    <Link to={page.path}>
+                    <Button
+                      className="navButton"
+                      component={Link}
+                      to={page.path}
+                      sx={{
+                        textTransform: "none",
+                      }}
+                    >
                       <Typography variant="h6" color={"primary"}>
                         {page.name}
                       </Typography>
-                    </Link>
+                    </Button>
                   </Grid>
                   {index !== pages.length - 1 && (
-                    <Divider
-                      orientation="vertical"
-                      sx={{ backgroundColor: "primary.main", opacity: "0.5" }}
-                      flexItem
-                    />
+                    <Grid item>
+                      <Divider
+                        orientation="vertical"
+                        sx={{
+                          backgroundColor: "primary.main",
+                          opacity: "0.5",
+                          height: "40px",
+                        }}
+                        flexItem
+                      />
+                    </Grid>
                   )}
                 </React.Fragment>
               ))}

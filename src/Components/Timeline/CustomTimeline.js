@@ -31,7 +31,11 @@ function CustomTimeline() {
     });
 
     setElements(filteredElements);
-  }, []);
+  }, [elementId]);
+
+  useEffect(() => {
+    setSelectedElement(elements.find((element) => element.id === elementId));
+  }, [elementId, elements]);
 
   return (
     <React.Fragment>

@@ -13,9 +13,22 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/Components/LayoutElements/NavBar.js:34
+#: src/Components/About/AboutMe.js:61
+#: src/Components/LayoutElements/NavBar.js:27
 msgid "About"
 msgstr "About me"
+
+#: src/Components/About/AboutMe.js:63
+msgid "About me 1rst paragraph"
+msgstr "I am currently in my first year of engineering studies at CESI Strasbourg, a school using the PBL method (problem based learning). I am currently looking for an internship abroad, as part of my studies from September to January."
+
+#: src/Components/About/AboutMe.js:66
+msgid "About me 2nd paragraph"
+msgstr "In my free time I work on my personal projects or go out with my friends. I have been a judoka for almost 10 years, currently a brown belt. I am also a good skier, it is a sport that I love."
+
+#: src/Components/About/AboutMe.js:69
+msgid "About me 3rd paragraph"
+msgstr "I speak French fluently and I have a good level in English, level B2 (TOEIC : 810 pts)."
 
 #: src/data/skillsElements.js:57
 msgid "Adaptabilité"
@@ -37,7 +50,7 @@ msgstr "Scientific Baccalaureate, speciality SI (engineering science), obtained 
 msgid "BacTitle"
 msgstr "Obtaining of the Baccalaureate"
 
-#: src/Components/Timeline/CustomTimeline.js:75
+#: src/Components/Timeline/CustomTimeline.js:67
 msgid "Click on an event to learn more"
 msgstr "Click on an event to learn more"
 
@@ -45,11 +58,11 @@ msgstr "Click on an event to learn more"
 msgid "Communication"
 msgstr "Communication"
 
-#: src/Components/LayoutElements/NavBar.js:38
+#: src/Components/LayoutElements/NavBar.js:39
 msgid "Contact"
 msgstr "Contact me"
 
-#: src/Components/Contact/ContactMe.js:189
+#: src/Components/Contact/ContactMe.js:172
 msgid "Contact Me"
 msgstr "Send me a message!"
 
@@ -60,6 +73,26 @@ msgstr "Creativity"
 #: src/data/skillsElements.js:53
 msgid "Curiosité"
 msgstr "Curiosity"
+
+#: src/Components/About/AboutMe.js:38
+msgid "Description alcatel dashboard"
+msgstr "An entire dashboard (front, back, BDD) created during my internship at Alcatel Lucent, to visualize the results of HMI tests. Using React, NodeJS and MySQL."
+
+#: src/Components/About/AboutMe.js:44
+msgid "Description backup management software"
+msgstr "As part of my studies, creation of a software in C# allowing to create backup presets, and to launch them. Recording of logs, different possibilities of configurations."
+
+#: src/Components/About/AboutMe.js:32
+msgid "Description plateformer game"
+msgstr "Beginning of a small platform game using Unity, under development."
+
+#: src/Components/About/AboutMe.js:20
+msgid "Description portfolio website"
+msgstr "The website you are currently visiting!"
+
+#: src/Components/About/AboutMe.js:26
+msgid "Description vacation planner website"
+msgstr "A website to plan your vacations, gathering vacation houses. It allows you to rate them and comment on them. Search by criteria, and possibility to create accounts. Using React, NodeJS and MySQL."
 
 #: src/data/timelineElements.js:7
 msgid "EngeeneringSchoolDiplomaDate"
@@ -85,29 +118,37 @@ msgstr "I entered the CESI engineering school to study computer science engineer
 msgid "EntryCesiTitle"
 msgstr "Entry to CESI engineering school"
 
-#: src/Components/Contact/ContactMe.js:157
+#: src/Components/Contact/ContactMe.js:155
 msgid "Error"
 msgstr "Error"
 
-#: src/Components/Welcome/WelcomePage.js:27
+#: src/Components/Welcome/WelcomePage.js:13
 msgid "Hello !"
 msgstr "Hello!"
 
-#: src/Components/LayoutElements/NavBar.js:22
+#: src/Components/LayoutElements/NavBar.js:23
 msgid "Home"
 msgstr "Home"
 
-#: src/Components/LayoutElements/Footer.js:22
+#: src/Components/LayoutElements/Footer.js:28
 msgid "I'm still working on this website, so please be patient :)"
 msgstr "I'm still working on this website, so please be patient :)"
 
-#: src/Components/Welcome/WelcomePage.js:53
+#: src/Components/Welcome/WelcomePage.js:39
 msgid "Let's go !"
 msgstr "Let's go !"
 
 #: src/Components/Contact/ContactMe.js:98
 msgid "Message sent successfully!"
 msgstr "Message sent successfully!"
+
+#: src/Components/About/AboutMe.js:30
+#~ msgid "My hobbies"
+#~ msgstr "My hobbies"
+
+#: src/Components/About/AboutMe.js:77
+msgid "My projects"
+msgstr "My projects"
 
 #: src/Components/NavBar.js:12
 #~ msgid "MyPortfolio"
@@ -117,21 +158,37 @@ msgstr "Message sent successfully!"
 #~ msgid "MyTimeline"
 #~ msgstr "My background"
 
-#: src/Components/Contact/ContactMe.js:244
+#: src/Components/About/AboutMe.js:31
+msgid "Plateformer game"
+msgstr "Plateformer game"
+
+#: src/Components/Contact/ContactMe.js:227
 msgid "Please enter a message."
 msgstr "Please enter a message."
 
-#: src/Components/Contact/ContactMe.js:212
+#: src/Components/Contact/ContactMe.js:195
 msgid "Please enter a name."
 msgstr "Please enter a name."
 
-#: src/Components/Contact/ContactMe.js:227
+#: src/Components/Contact/ContactMe.js:210
 msgid "Please enter a valid email."
 msgstr "Please enter a valid email."
 
 #: src/Components/Contact/ContactMe.js:77
 msgid "Please fill out the form correctly."
 msgstr "Please fill out the form correctly."
+
+#: src/Components/About/AboutMe.js:19
+msgid "Portfolio website"
+msgstr "Portfolio website"
+
+#: src/Components/About/AboutMe.js:90
+msgid "Projets personnels"
+msgstr "Personal projects"
+
+#: src/Components/About/AboutMe.js:130
+msgid "Projets professionnels"
+msgstr "Professional projects"
 
 #: src/data/skillsElements.js:45
 msgid "Rigueur"
@@ -169,8 +226,8 @@ msgstr "Sense of education"
 msgid "Sens de la responsabilité"
 msgstr "Responsible"
 
-#: src/Components/LayoutElements/NavBar.js:26
-#: src/Components/Skills/SkillsPreview.js:54
+#: src/Components/LayoutElements/NavBar.js:31
+#: src/Components/Skills/SkillsPreview.js:49
 msgid "Skills"
 msgstr "My skills"
 
@@ -226,7 +283,7 @@ msgstr "An internship concluding the studies"
 msgid "StageA5Title"
 msgstr "End of study internship (5th year)"
 
-#: src/Components/Contact/ContactMe.js:157
+#: src/Components/Contact/ContactMe.js:155
 msgid "Success"
 msgstr "Success"
 
@@ -234,7 +291,7 @@ msgstr "Success"
 msgid "Système d'informations"
 msgstr "Information system"
 
-#: src/Components/LayoutElements/NavBar.js:30
+#: src/Components/LayoutElements/NavBar.js:35
 msgid "Timeline"
 msgstr "My background"
 
@@ -242,9 +299,21 @@ msgstr "My background"
 msgid "Travail d'équipe"
 msgstr "Teamwork"
 
-#: src/Components/Welcome/WelcomePage.js:31
+#: src/Components/About/AboutMe.js:25
+msgid "Vacation planner website"
+msgstr "Vacation planner website"
+
+#: src/Components/Welcome/WelcomePage.js:17
 msgid "Welcome to my portfolio !"
 msgstr "Welcome to my portfolio!"
+
+#: src/Components/About/AboutMe.js:37
+msgid "alcatel dashboard"
+msgstr "Alcatel dashboard"
+
+#: src/Components/About/AboutMe.js:43
+msgid "backup management software"
+msgstr "Backup management software"
 
 #: src/data/timelineElements.js:49
 msgid "highschoolDate"

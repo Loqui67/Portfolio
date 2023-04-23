@@ -11,6 +11,7 @@ import React, { useState, useEffect } from "react";
 import { hardskills, softskills } from "../../data/skillsElements";
 import { t } from "@lingui/macro";
 import CustomBox from "../MuiCustomComponents/CustomBox";
+import CustomTypoTitle from "../MuiCustomComponents/CustomTypoTitle";
 
 function SkillsPreview() {
   const [skills, setSkills] = useState({ hardskills, softskills });
@@ -45,9 +46,7 @@ function SkillsPreview() {
           alignItems={"center"}
           width={"100%"}
         >
-          <Typography variant="h4" color={"primary"}>
-            {t`Skills`}
-          </Typography>
+          <CustomTypoTitle divider={false}>{t`Skills`}</CustomTypoTitle>
           <Stack
             direction={{ sm: "column", md: "row" }}
             spacing={1}
@@ -57,43 +56,36 @@ function SkillsPreview() {
             width={"100%"}
           >
             <CustomBox width={"100%"}>
-              <Typography variant="h6" color={"primary"} textAlign={"center"}>
-                Soft skills
-              </Typography>
-
-              <Divider
-                flexItem
-                orientation={{ sm: "horizontal", md: "vertical" }}
-              />
+              <Divider>
+                <CustomTypoTitle divider={false} variant="h6" color={"primary"}>
+                  Soft skills
+                </CustomTypoTitle>
+              </Divider>
               <CustomBox>
                 <List>
                   {skills.softskills.map((skill) => (
-                    <ListItem>
+                    <ListItem key={skill.id}>
                       <ListItemIcon>{skill.icon}</ListItemIcon>
-                      <ListItemText key={skill.id}>
-                        <Stack
-                          direction={"row"}
-                          alignItems={"center"}
-                          spacing={1}
-                        >
-                          <Typography variant="body1" color={"primary"}>
-                            {skill.title}
-                          </Typography>
-                        </Stack>
-                      </ListItemText>
+                      <ListItemText primary={skill.title} />
                     </ListItem>
                   ))}
                 </List>
               </CustomBox>
             </CustomBox>
 
-            <Divider orientation="vertical" flexItem />
+            <Divider
+              orientation="vertical"
+              flexItem
+              display={{ xs: "none", sm: "block" }}
+            />
 
             <CustomBox width={"100%"}>
-              <Typography variant="h6" color={"primary"} textAlign={"center"}>
-                Hard skills
-              </Typography>
-              <Divider flexItem />
+              <Divider>
+                <CustomTypoTitle divider={false} variant="h6" color={"primary"}>
+                  Hard skills
+                </CustomTypoTitle>
+              </Divider>
+
               <CustomBox>
                 <List>
                   {skills.hardskills.map((skill) => (

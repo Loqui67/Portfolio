@@ -13,9 +13,22 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/Components/LayoutElements/NavBar.js:34
+#: src/Components/About/AboutMe.js:61
+#: src/Components/LayoutElements/NavBar.js:27
 msgid "About"
 msgstr "A propos de moi"
+
+#: src/Components/About/AboutMe.js:63
+msgid "About me 1rst paragraph"
+msgstr "Je suis actuellement en première année du cycle ingénieur à CESI Strasbourg, une école utilisant la méthode PBL (problem based learning). Je recherche actuellement un stage à l'étranger, dans le cadre de mes études du x septembre au x janvier."
+
+#: src/Components/About/AboutMe.js:66
+msgid "About me 2nd paragraph"
+msgstr "Durant mon temps libre je travaille sur mes projets personnels ou je sors avec mes amis. Je suis un judoka depuis près de 10 ans, actuellement ceinture marron. Je suis également un bon skieur, c'est un sport que j'affectionne beaucoup."
+
+#: src/Components/About/AboutMe.js:69
+msgid "About me 3rd paragraph"
+msgstr "Je parle français couramment et j'ai un niveau correct en anglais, niveau B2 (TOEIC : 810 pts)."
 
 #: src/data/skillsElements.js:57
 msgid "Adaptabilité"
@@ -37,7 +50,7 @@ msgstr "Baccalauréat Scientifique, spécialité SI, obtenu avec mention assez b
 msgid "BacTitle"
 msgstr "Obtention du Baccalauréat"
 
-#: src/Components/Timeline/CustomTimeline.js:75
+#: src/Components/Timeline/CustomTimeline.js:67
 msgid "Click on an event to learn more"
 msgstr "Cliquez sur un événement pour en savoir plus"
 
@@ -45,11 +58,11 @@ msgstr "Cliquez sur un événement pour en savoir plus"
 msgid "Communication"
 msgstr "Communication"
 
-#: src/Components/LayoutElements/NavBar.js:38
+#: src/Components/LayoutElements/NavBar.js:39
 msgid "Contact"
 msgstr "Me contacter"
 
-#: src/Components/Contact/ContactMe.js:189
+#: src/Components/Contact/ContactMe.js:172
 msgid "Contact Me"
 msgstr "Envoie-moi un message !"
 
@@ -60,6 +73,26 @@ msgstr "Créativité"
 #: src/data/skillsElements.js:53
 msgid "Curiosité"
 msgstr "Curiosité"
+
+#: src/Components/About/AboutMe.js:38
+msgid "Description alcatel dashboard"
+msgstr "Un dashboard entier (front, back, BDD) créé lors de mon stage chez Alcatel Lucent, pour visualiser les résultats des tests IHM. Utilisation de React, NodeJS et MySQL."
+
+#: src/Components/About/AboutMe.js:44
+msgid "Description backup management software"
+msgstr "Dans le cadre de mes études, création d'un logiciel en C# permettant de créer des presets de sauvegardes, et de les lancer. Enregistrement de logs, différentes possibilités de configurations."
+
+#: src/Components/About/AboutMe.js:32
+msgid "Description plateformer game"
+msgstr "Début d'un petit jeu de plateforme à l'aide de Unity, en cours de développement."
+
+#: src/Components/About/AboutMe.js:20
+msgid "Description portfolio website"
+msgstr "Le site que vous êtes en train de visiter !"
+
+#: src/Components/About/AboutMe.js:26
+msgid "Description vacation planner website"
+msgstr "Un site web pour planifier ses vacances, regroupant des maisons de vacances. Il permet de les noter et de les commenter. Recherche par critères, et possibilité de créer des comptes. Utilisation de React, NodeJS et MySQL."
 
 #: src/data/timelineElements.js:7
 msgid "EngeeneringSchoolDiplomaDate"
@@ -85,29 +118,37 @@ msgstr "Mon entrée à l'école d'ingénieur CESI, pour y suivre une formation d
 msgid "EntryCesiTitle"
 msgstr "Entrée à l'école d'ingénieur CESI"
 
-#: src/Components/Contact/ContactMe.js:157
+#: src/Components/Contact/ContactMe.js:155
 msgid "Error"
 msgstr "Erreur"
 
-#: src/Components/Welcome/WelcomePage.js:27
+#: src/Components/Welcome/WelcomePage.js:13
 msgid "Hello !"
 msgstr "Salut !"
 
-#: src/Components/LayoutElements/NavBar.js:22
+#: src/Components/LayoutElements/NavBar.js:23
 msgid "Home"
 msgstr "Accueil"
 
-#: src/Components/LayoutElements/Footer.js:22
+#: src/Components/LayoutElements/Footer.js:28
 msgid "I'm still working on this website, so please be patient :)"
 msgstr "Je travaille encore sur ce site, alors soyez patients :)"
 
-#: src/Components/Welcome/WelcomePage.js:53
+#: src/Components/Welcome/WelcomePage.js:39
 msgid "Let's go !"
 msgstr "C'est parti !"
 
 #: src/Components/Contact/ContactMe.js:98
 msgid "Message sent successfully!"
 msgstr "Le message a bien été envoyé !"
+
+#: src/Components/About/AboutMe.js:30
+#~ msgid "My hobbies"
+#~ msgstr "Mes loisirs"
+
+#: src/Components/About/AboutMe.js:77
+msgid "My projects"
+msgstr "Mes projets"
 
 #: src/Components/NavBar.js:12
 #~ msgid "MyPortfolio"
@@ -117,21 +158,37 @@ msgstr "Le message a bien été envoyé !"
 #~ msgid "MyTimeline"
 #~ msgstr "Mon parcours"
 
-#: src/Components/Contact/ContactMe.js:244
+#: src/Components/About/AboutMe.js:31
+msgid "Plateformer game"
+msgstr "Jeu de plateforme"
+
+#: src/Components/Contact/ContactMe.js:227
 msgid "Please enter a message."
 msgstr "Merci d'entrer un message."
 
-#: src/Components/Contact/ContactMe.js:212
+#: src/Components/Contact/ContactMe.js:195
 msgid "Please enter a name."
 msgstr "Merci d'entrer un nom."
 
-#: src/Components/Contact/ContactMe.js:227
+#: src/Components/Contact/ContactMe.js:210
 msgid "Please enter a valid email."
 msgstr "Merci d'entrer une adresse email valide."
 
 #: src/Components/Contact/ContactMe.js:77
 msgid "Please fill out the form correctly."
 msgstr "Merci de remplir le formulaire correctement."
+
+#: src/Components/About/AboutMe.js:19
+msgid "Portfolio website"
+msgstr "Site web de portfolio"
+
+#: src/Components/About/AboutMe.js:90
+msgid "Projets personnels"
+msgstr "Projets personnels"
+
+#: src/Components/About/AboutMe.js:130
+msgid "Projets professionnels"
+msgstr "Projets professionnels"
 
 #: src/data/skillsElements.js:45
 msgid "Rigueur"
@@ -169,8 +226,8 @@ msgstr "Sens de la pédagogie"
 msgid "Sens de la responsabilité"
 msgstr "Responsable"
 
-#: src/Components/LayoutElements/NavBar.js:26
-#: src/Components/Skills/SkillsPreview.js:54
+#: src/Components/LayoutElements/NavBar.js:31
+#: src/Components/Skills/SkillsPreview.js:49
 msgid "Skills"
 msgstr "Mes compétences"
 
@@ -226,7 +283,7 @@ msgstr "Un stage concluant les études"
 msgid "StageA5Title"
 msgstr "Stage de fin d'étude (5ème année)"
 
-#: src/Components/Contact/ContactMe.js:157
+#: src/Components/Contact/ContactMe.js:155
 msgid "Success"
 msgstr "Succès"
 
@@ -234,7 +291,7 @@ msgstr "Succès"
 msgid "Système d'informations"
 msgstr "Système d'informations"
 
-#: src/Components/LayoutElements/NavBar.js:30
+#: src/Components/LayoutElements/NavBar.js:35
 msgid "Timeline"
 msgstr "Mon parcours"
 
@@ -242,9 +299,21 @@ msgstr "Mon parcours"
 msgid "Travail d'équipe"
 msgstr "Travail d'équipe"
 
-#: src/Components/Welcome/WelcomePage.js:31
+#: src/Components/About/AboutMe.js:25
+msgid "Vacation planner website"
+msgstr "Site web de planification de vacances"
+
+#: src/Components/Welcome/WelcomePage.js:17
 msgid "Welcome to my portfolio !"
 msgstr "Bienvenue sur mon portfolio !"
+
+#: src/Components/About/AboutMe.js:37
+msgid "alcatel dashboard"
+msgstr "Dashboard alcatel"
+
+#: src/Components/About/AboutMe.js:43
+msgid "backup management software"
+msgstr "Logiciel de gestion de sauvegarde"
 
 #: src/data/timelineElements.js:49
 msgid "highschoolDate"

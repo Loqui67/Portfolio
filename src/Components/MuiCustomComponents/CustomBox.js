@@ -20,7 +20,7 @@ function CustomBox({
     });
 
   responsive &&
-    (sx = { maxWidth: { xs: "90%", sm: "80%", md: "60%", lg: "50%" }, ...sx });
+    (sx = { maxWidth: { xs: "90%", sm: "80%", md: "70%", lg: "60%" }, ...sx });
 
   centered &&
     (sx = {

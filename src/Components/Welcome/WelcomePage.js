@@ -25,7 +25,7 @@ function WelcomePage() {
             }}
           >
             <Button>
-              <Link to="/timeline" className="expand-button">
+              <Link to="/about" className="expand-button">
                 <Stack
                   direction="row"
                   spacing={1}

@@ -1,6 +1,6 @@
 import React from "react";
 import { Navigate, useOutletContext, useParams } from "react-router-dom";
-import { Typography } from "@mui/material";
+import { Divider, Typography } from "@mui/material";
 import { isValidElementId } from "../../data/timelineElements";
 import CustomBox from "../MuiCustomComponents/CustomBox";
 
@@ -23,7 +23,10 @@ function TimelineDetails() {
         <Typography variant="h6" gutterBottom>
           {date}
         </Typography>
-        <Typography variant="subtitle1">{description}</Typography>
+        <Divider />
+        <Typography variant="subtitle1" mt={2}>
+          {description}
+        </Typography>
       </CustomBox>
     </React.Fragment>
   );

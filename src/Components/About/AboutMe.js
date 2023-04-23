@@ -1,76 +1,168 @@
-import { List, ListItem, Stack, Typography } from "@mui/material";
+import {
+  Divider,
+  IconButton,
+  List,
+  ListItem,
+  ListItemText,
+  Stack,
+  Typography,
+} from "@mui/material";
 import React from "react";
 import CustomBox from "../MuiCustomComponents/CustomBox";
+import CustomTypoTitle from "../MuiCustomComponents/CustomTypoTitle";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import { t } from "@lingui/macro";
 
 function AboutMe() {
+  const projects = [
+    {
+      name: t`Portfolio website`,
+      description: t`Description portfolio website`,
+      link: "https://github.com/Loqui67/Portfolio",
+      type: "personal",
+    },
+    {
+      name: t`Vacation planner website`,
+      description: t`Description vacation planner website`,
+      link: "https://github.com/Loqui67/site-vacances",
+      type: "personal",
+    },
+    {
+      name: t`Plateformer game`,
+      description: t`Description plateformer game`,
+      link: "https://github.com/Loqui67/FirstPlateformer",
+      type: "personal",
+    },
+    {
+      name: t`alcatel dashboard`,
+      description: t`Description alcatel dashboard`,
+      link: "https://github.com/Loqui67/dashboardAlcaltel",
+      type: "professional",
+    },
+    {
+      name: t`backup management software`,
+      description: t`Description backup management software`,
+      link: "https://github.com/Loqui67/Projet-Programmation-Systeme",
+      type: "professional",
+    },
+  ];
+
   return (
     <React.Fragment>
-      <Stack
-        direction={"row"}
-        justifyContent={"space-evenly"}
-        width={"100%"}
-        height={"100%"}
-        spacing={2}
-      >
-        <CustomBox whiteBox centered responsive>
-          <Stack direction={"column"} spacing={2}>
-            <Typography variant={"h4"} gutterBottom>
-              My projects
-            </Typography>
-            <List>
-              <ListItem>
-                <Typography variant={"h6"} gutterBottom>
-                  Project 1
-                </Typography>
-              </ListItem>
-              <ListItem>
-                <Typography variant={"h6"} gutterBottom>
-                  Project 2
-                </Typography>
-              </ListItem>
-            </List>
-          </Stack>
-        </CustomBox>
-        <CustomBox whiteBox centered responsive>
-          <Stack direction={"column"} spacing={2}>
-            <Typography variant={"h4"} gutterBottom>
-              My description
-            </Typography>
-            <Typography variant={"h6"} gutterBottom>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              tincidunt, nisl eget aliquam tincidunt, nisl nisl aliquam nisl,
-              nec aliquam nisl nisl sit amet nisl. Sed tincidunt, nisl eget
-              aliquam tincidunt, nisl nisl aliquam nisl, nec aliquam nisl nisl
-              sit amet nisl. Sed tincidunt, nisl eget aliquam tincidunt, nisl
-              nisl aliquam nisl, nec aliquam nisl nisl sit amet nisl. Sed
-              tincidunt, nisl eget aliquam tincidunt, nisl nisl aliquam nisl,
-              nec aliquam nisl nisl sit amet nisl. Sed tincidunt, nisl eget
-              aliquam tincidunt, nisl nisl aliquam nisl, nec aliquam nisl nisl
-              sit amet nisl. Sed tincidunt, nisl eget aliquam tincidunt, nisl
-              nisl aliquam nisl, nec aliquam nisl.
-            </Typography>
-          </Stack>
-        </CustomBox>
-        <CustomBox whiteBox centered responsive>
-          <Stack direction={"column"} spacing={2}>
-            <Typography variant={"h4"} gutterBottom>
-              My hobbies
-            </Typography>
-            <List>
-              <ListItem>
-                <Typography variant={"h6"} gutterBottom>
-                  Hobby 1
-                </Typography>
-              </ListItem>
-              <ListItem>
-                <Typography variant={"h6"} gutterBottom>
-                  Hobby 2
-                </Typography>
-              </ListItem>
-            </List>
-          </Stack>
-        </CustomBox>
-      </Stack>
+      <CustomBox centered responsive width={"100%"}>
+        <Stack
+          direction={"column"}
+          spacing={8}
+          alignItems={"center"}
+          width={"100%"}
+        >
+          <CustomBox whiteBox centered width={"100%"}>
+            <Stack direction={"column"} spacing={2} width={"100%"}>
+              <CustomTypoTitle>{t`About`}</CustomTypoTitle>
+              <Typography variant={"body1"} gutterBottom>
+                {t`About me 1rst paragraph`}
+              </Typography>
+              <Typography variant={"body1"} gutterBottom>
+                {t`About me 2nd paragraph`}
+              </Typography>
+              <Typography variant={"body1"} gutterBottom>
+                {t`About me 3rd paragraph`}
+              </Typography>
+            </Stack>
+          </CustomBox>
+
+          <CustomBox whiteBox centered width={"100%"}>
+            <Stack direction={"column"} spacing={2} width={"100%"}>
+              <CustomTypoTitle divider={false}>
+                {t`My projects`}
+              </CustomTypoTitle>
+
+              <Stack
+                direction={{ xs: "column", sm: "row" }}
+                spacing={2}
+                width={"100%"}
+                justifyContent={"space-evenly"}
+              >
+                <CustomBox width={"100%"}>
+                  <Stack direction={"column"} spacing={2} width={"100%"}>
+                    <Divider>
+                      <CustomTypoTitle divider={false} variant="h6">
+                        {t`Projets personnels`}
+                      </CustomTypoTitle>
+                    </Divider>
+                    <List>
+                      {projects
+                        .filter((project) => project.type === "personal")
+                        .map((project) => (
+                          <ListItem key={project.name}>
+                            <ListItemText
+                              primary={project.name}
+                              secondary={project.description}
+                              sx={{ width: "100%" }}
+                            />
+                            <Divider
+                              orientation={"vertical"}
+                              flexItem
+                              sx={{ marginInline: 2 }}
+                            />
+
+                            <IconButton
+                              href={project.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <OpenInNewIcon />
+                            </IconButton>
+                          </ListItem>
+                        ))}
+                    </List>
+                  </Stack>
+                </CustomBox>
+                <Divider
+                  orientation={"vertical"}
+                  flexItem
+                  display={{ xs: "none", sm: "block" }}
+                />
+                <CustomBox width={"100%"}>
+                  <Stack direction={"column"} spacing={2} width={"100%"}>
+                    <Divider>
+                      <CustomTypoTitle divider={false} variant="h6">
+                        {t`Projets professionnels`}
+                      </CustomTypoTitle>
+                    </Divider>
+                    <List>
+                      {projects
+                        .filter((project) => project.type === "professional")
+                        .map((project) => (
+                          <ListItem key={project.name}>
+                            <ListItemText
+                              primary={project.name}
+                              secondary={project.description}
+                              sx={{ width: "100%" }}
+                            />
+                            <Divider
+                              orientation={"vertical"}
+                              flexItem
+                              sx={{ marginInline: 2 }}
+                            />
+
+                            <IconButton
+                              href={project.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <OpenInNewIcon />
+                            </IconButton>
+                          </ListItem>
+                        ))}
+                    </List>
+                  </Stack>
+                </CustomBox>
+              </Stack>
+            </Stack>
+          </CustomBox>
+        </Stack>
+      </CustomBox>
     </React.Fragment>
   );
 }

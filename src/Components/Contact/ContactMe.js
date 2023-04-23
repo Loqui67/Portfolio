@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
   Button,
   TextField,
-  Typography,
   Stack,
   FormGroup,
   Alert,
@@ -11,6 +10,7 @@ import {
 import { t } from "@lingui/macro";
 import axios from "axios";
 import CustomBox from "../MuiCustomComponents/CustomBox";
+import CustomTypoTitle from "../MuiCustomComponents/CustomTypoTitle";
 
 const ContactMe = () => {
   const [userInfo, setUserInfo] = useState({
@@ -169,7 +169,7 @@ const ContactMe = () => {
         }}
       >
         <Stack direction="column" spacing={1} alignItems={"center"}>
-          <Typography variant="h4" gutterBottom>{t`Contact Me`}</Typography>
+          <CustomTypoTitle>{t`Contact Me`}</CustomTypoTitle>
           {renderAlert()}
           <CustomBox
             component="form"
