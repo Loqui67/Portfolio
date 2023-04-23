@@ -2,7 +2,7 @@ import React from "react";
 import { Navigate, useOutletContext, useParams } from "react-router-dom";
 import { Divider, Typography } from "@mui/material";
 import { isValidElementId } from "../../data/timelineElements";
-import CustomBox from "../MuiCustomComponents/CustomBox";
+import CustomBox from "../Custom/CustomBox";
 
 function TimelineDetails() {
   const selectedElement = useOutletContext();

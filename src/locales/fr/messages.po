@@ -50,7 +50,11 @@ msgstr "Baccalauréat Scientifique, spécialité SI, obtenu avec mention assez b
 msgid "BacTitle"
 msgstr "Obtention du Baccalauréat"
 
-#: src/Components/Timeline/CustomTimeline.js:67
+#: src/Components/Welcome/Home.js:50
+msgid "Bienvenue sur mon portfolio !"
+msgstr "Bienvenue sur mon portfolio !"
+
+#: src/Components/Timeline/CustomTimeline.js:68
 msgid "Click on an event to learn more"
 msgstr "Cliquez sur un événement pour en savoir plus"
 
@@ -134,6 +138,7 @@ msgstr "Accueil"
 msgid "I'm still working on this website, so please be patient :)"
 msgstr "Je travaille encore sur ce site, alors soyez patients :)"
 
+#: src/Components/Welcome/Home.js:80
 #: src/Components/Welcome/WelcomePage.js:39
 msgid "Let's go !"
 msgstr "C'est parti !"
@@ -227,7 +232,7 @@ msgid "Sens de la responsabilité"
 msgstr "Responsable"
 
 #: src/Components/LayoutElements/NavBar.js:31
-#: src/Components/Skills/SkillsPreview.js:49
+#: src/Components/Skills/SkillsPreview.js:50
 msgid "Skills"
 msgstr "Mes compétences"
 

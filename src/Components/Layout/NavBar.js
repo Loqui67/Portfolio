@@ -13,7 +13,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { t } from "@lingui/macro";
 import { Link } from "react-router-dom";
-import CustomBox from "../MuiCustomComponents/CustomBox";
+import CustomBox from "../Custom/CustomBox";
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = useState(null);

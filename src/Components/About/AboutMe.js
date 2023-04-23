@@ -8,8 +8,8 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import CustomBox from "../MuiCustomComponents/CustomBox";
-import CustomTypoTitle from "../MuiCustomComponents/CustomTypoTitle";
+import CustomBox from "../Custom/CustomBox";
+import CustomTypoTitle from "../Custom/CustomTypoTitle";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { t } from "@lingui/macro";
 
@@ -49,7 +49,7 @@ function AboutMe() {
 
   return (
     <React.Fragment>
-      <CustomBox centered responsive width={"100%"}>
+      <CustomBox centered responsive width={"100%"} marginBlock={"5vh"}>
         <Stack
           direction={"column"}
           spacing={8}

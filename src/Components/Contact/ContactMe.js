@@ -9,8 +9,8 @@ import {
 } from "@mui/material";
 import { t } from "@lingui/macro";
 import axios from "axios";
-import CustomBox from "../MuiCustomComponents/CustomBox";
-import CustomTypoTitle from "../MuiCustomComponents/CustomTypoTitle";
+import CustomBox from "../Custom/CustomBox";
+import CustomTypoTitle from "../Custom/CustomTypoTitle";
 
 const ContactMe = () => {
   const [userInfo, setUserInfo] = useState({

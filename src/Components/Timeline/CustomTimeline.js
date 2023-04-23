@@ -12,7 +12,7 @@ import { Stack, Typography } from "@mui/material";
 import { Link, Outlet, useParams } from "react-router-dom";
 import { elements as rawElements } from "../../data/timelineElements";
 import { t } from "@lingui/macro";
-import CustomBox from "../MuiCustomComponents/CustomBox";
+import CustomBox from "../Custom/CustomBox";
 
 function CustomTimeline() {
   const { elementId } = useParams();
@@ -45,6 +45,7 @@ function CustomTimeline() {
         justifyContent="space-evenly"
         alignItems="center"
         width="100%"
+        sx={{ marginBlock: "5vh" }}
       >
         <CustomBox whiteBox responsive centered>
           <Timeline>

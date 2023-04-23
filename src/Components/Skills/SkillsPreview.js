@@ -10,8 +10,8 @@ import {
 import React, { useState, useEffect } from "react";
 import { hardskills, softskills } from "../../data/skillsElements";
 import { t } from "@lingui/macro";
-import CustomBox from "../MuiCustomComponents/CustomBox";
-import CustomTypoTitle from "../MuiCustomComponents/CustomTypoTitle";
+import CustomBox from "../Custom/CustomBox";
+import CustomTypoTitle from "../Custom/CustomTypoTitle";
 
 function SkillsPreview() {
   const [skills, setSkills] = useState({ hardskills, softskills });
@@ -38,6 +38,7 @@ function SkillsPreview() {
         centered
         sx={{
           width: "1200px",
+          marginBlock: "5vh",
         }}
       >
         <Stack

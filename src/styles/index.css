@@ -19,11 +19,3 @@ body {
 a {
   text-decoration: none;
 }
-
-.expand-button {
-  width: 200px;
-  transition: 0.5s;
-}
-.expand-button:hover {
-  width: 250px;
-}

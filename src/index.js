@@ -1,21 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import WelcomePage from "./Components/Welcome/WelcomePage";
 import { i18n } from "@lingui/core";
 import { I18nProvider } from "@lingui/react";
 import { messages as enMessages } from "./locales/en/messages";
 import { messages as frMessages } from "./locales/fr/messages";
 import { ThemeProvider, createTheme } from "@mui/material";
 import SkillsPreview from "./Components/Skills/SkillsPreview";
-import Layout from "./Components/LayoutElements/Layout";
+import Layout from "./Components/Layout/Layout";
 import CustomTimeline from "./Components/Timeline/CustomTimeline";
-import ParticlesBackground from "./Components/LayoutElements/ParticlesBackground";
+import ParticlesBackground from "./Components/Layout/ParticlesBackground";
 import "./styles/index.css";
 import TimelineDetails from "./Components/Timeline/TimelineDetails";
 import { en, fr } from "make-plural/plurals";
 import ContactMe from "./Components/Contact/ContactMe";
 import AboutMe from "./Components/About/AboutMe";
+import Home from "./Components/Home/Home";
 
 i18n.load({
   en: enMessages,
@@ -61,7 +61,7 @@ root.render(
           <ParticlesBackground />
           <Layout>
             <Routes>
-              <Route path="/" element={<WelcomePage />} />
+              <Route path="/" element={<Home />} />
               <Route path="timeline" element={<CustomTimeline />}>
                 <Route path=":elementId" element={<TimelineDetails />} />
               </Route>

@@ -11,8 +11,7 @@ function CustomBox({
 }) {
   whiteBox &&
     (sx = {
-      backgroundColor: "white.main",
-      opacity: "0.8",
+      backgroundColor: "rgba(255, 255, 255, .8)",
       boxShadow: 1,
       borderRadius: "1rem",
       padding: "1rem",
