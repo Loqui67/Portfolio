@@ -27,7 +27,7 @@ i18n.loadLocaleData({
   fr: { plurals: fr },
 });
 
-i18n.activate(localStorage.getItem("language") || "fr");
+i18n.activate(localStorage.getItem("language") || "en");
 
 const theme = createTheme({
   palette: {
