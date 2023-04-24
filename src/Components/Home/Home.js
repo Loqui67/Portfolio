@@ -24,7 +24,7 @@ function Home() {
   return (
     <React.Fragment>
       <DiagonalDiv>
-        <CustomBox centered width={"100%"}>
+        <CustomBox centered width={"100%"} height={"100%"}>
           <Stack
             direction="column"
             alignItems="center"
