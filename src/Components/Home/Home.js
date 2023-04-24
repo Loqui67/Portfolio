@@ -17,7 +17,6 @@ const DiagonalDiv = styled(Box)`
   );
   border-block: 5px solid #000000;
   color: #ffffff;
-  z-index: -1;
   height: 65vh;
 `;
 
