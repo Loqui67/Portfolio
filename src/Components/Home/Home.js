@@ -1,4 +1,4 @@
-import { Button, Stack, Typography } from "@mui/material";
+import { Button, Stack, Typography, Box } from "@mui/material";
 import React from "react";
 import CustomBox from "../Custom/CustomBox";
 import { Link } from "react-router-dom";
@@ -7,9 +7,9 @@ import { t } from "@lingui/macro";
 import styled from "styled-components";
 import shadows from "@mui/material/styles/shadows";
 
-const DiagonalDiv = styled.div`
+const DiagonalDiv = styled(Box)`
   width: 100%;
-  transform: skewY(-5deg);
+  transform: skewY(-4deg);
   background: linear-gradient(
     135deg,
     rgba(73, 160, 157, 0.9),
@@ -17,6 +17,8 @@ const DiagonalDiv = styled.div`
   );
   border-block: 5px solid #000000;
   color: #ffffff;
+  z-index: -1;
+  height: 65vh;
 `;
 
 function Home() {
@@ -28,7 +30,7 @@ function Home() {
             direction="column"
             alignItems="center"
             sx={{
-              marginBlock: "5vh",
+              marginBlock: "2vh",
             }}
           >
             <Typography
