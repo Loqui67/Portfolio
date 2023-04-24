@@ -80,7 +80,7 @@ msgstr "Curiosity"
 
 #: src/Components/About/AboutMe.js:38
 msgid "Description alcatel dashboard"
-msgstr "An entire dashboard (front, back, BDD) created during my internship at Alcatel Lucent, to visualize the results of HMI tests. Using React, NodeJS and MySQL."
+msgstr "An entire dashboard (front, back, BDD) created during my internship at Alcatel Lucent Enterprise, to visualize the results of HMI tests. Using React, NodeJS and MySQL."
 
 #: src/Components/About/AboutMe.js:44
 msgid "Description backup management software"
@@ -246,7 +246,7 @@ msgstr "2022-04 / 2022-07"
 
 #: src/data/timelineElements.js:30
 msgid "StageA2Description"
-msgstr "A 4 months internship at Alcatel-Lucent to discover the business world, and more particularly the world of automated tests. I was able to write different automated tests in Java, and discover the Selenium framework. I also discovered the world of DevOps, and more particularly the CI/CD. During this internship, I developed a dashboard in React, NodeJS and MySQL, allowing to display the results of the tests."
+msgstr "A 4 months internship at Alcatel Lucent Enterprise to discover the business world, and more particularly the world of automated tests. I was able to write different automated tests in Java, and discover the Selenium framework. I also discovered the world of DevOps, and more particularly the CI/CD. During this internship, I developed a dashboard in React, NodeJS and MySQL, allowing to display the results of the tests."
 
 #: src/data/timelineElements.js:29
 msgid "StageA2Title"

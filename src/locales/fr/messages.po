@@ -80,7 +80,7 @@ msgstr "Curiosité"
 
 #: src/Components/About/AboutMe.js:38
 msgid "Description alcatel dashboard"
-msgstr "Un dashboard entier (front, back, BDD) créé lors de mon stage chez Alcatel Lucent, pour visualiser les résultats des tests IHM. Utilisation de React, NodeJS et MySQL."
+msgstr "Un dashboard entier (front, back, BDD) créé lors de mon stage chez Alcatel Lucent Enterprise, pour visualiser les résultats des tests IHM. Utilisation de React, NodeJS et MySQL."
 
 #: src/Components/About/AboutMe.js:44
 msgid "Description backup management software"
@@ -246,7 +246,7 @@ msgstr "04/2022 - 06/2022"
 
 #: src/data/timelineElements.js:30
 msgid "StageA2Description"
-msgstr "Un stage de 4 mois réalisé chez Alcatel-Lucent pour y découvrir le monde de l'entreprise, et plus particulièrement le monde du tests automatisés. J'ai pu écrire différents tests automatisés en Java, et découvrir le framework Selenium. J'y ai également découvert le monde du DevOps, et plus particulièrement le CI/CD. Durant ce stage, j'ai développé un dashboard en React, NodeJS et MySQL, permettant d'afficher les résultats des tests."
+msgstr "Un stage de 4 mois réalisé chez Alcatel Lucent Enterprise pour y découvrir le monde de l'entreprise, et plus particulièrement le monde du test automatisé. J'ai pu écrire différents tests en Java, et découvrir le framework Selenium. J'y ai également découvert le monde du DevOps, et plus particulièrement le CI/CD. Durant ce stage, j'ai développé un dashboard en React, NodeJS et MySQL, permettant d'afficher les résultats des tests."
 
 #: src/data/timelineElements.js:29
 msgid "StageA2Title"
@@ -258,7 +258,7 @@ msgstr "01/2023 - 04/2023"
 
 #: src/data/timelineElements.js:24
 msgid "StageA3Description"
-msgstr "Un stage de 3 mois réalisé chez Thinkfab en tant que développeur React. J'en retire une expérience enrichissante et de nouvelles connaissances dans des bibliothèques React, tel que Redux."
+msgstr "Un stage de 3 mois réalisé chez Thinkfab en tant que développeur React. J'en retire une expérience enrichissante et de nouvelles connaissances dans des bibliothèques React, telles que Redux ou MUI."
 
 #: src/data/timelineElements.js:23
 msgid "StageA3Title"
