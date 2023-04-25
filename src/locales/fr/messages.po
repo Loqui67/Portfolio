@@ -14,13 +14,13 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: src/Components/About/AboutMe.js:61
-#: src/Components/LayoutElements/NavBar.js:27
+#: src/Components/Layout/NavBar.js:27
 msgid "About"
 msgstr "A propos de moi"
 
 #: src/Components/About/AboutMe.js:63
 msgid "About me 1rst paragraph"
-msgstr "Je suis actuellement en première année du cycle ingénieur à CESI Strasbourg, une école utilisant la méthode PBL (problem based learning). Je recherche actuellement un stage à l'étranger, dans le cadre de mes études du x septembre au x janvier."
+msgstr "Je suis actuellement en première année du cycle ingénieur à CESI Strasbourg, une école utilisant la méthode PBL (problem based learning). Je recherche actuellement un stage à l'étranger, dans le cadre de mes études du 18 septembre au 2 février."
 
 #: src/Components/About/AboutMe.js:66
 msgid "About me 2nd paragraph"
@@ -50,7 +50,7 @@ msgstr "Baccalauréat Scientifique, spécialité SI, obtenu avec mention assez b
 msgid "BacTitle"
 msgstr "Obtention du Baccalauréat"
 
-#: src/Components/Welcome/Home.js:50
+#: src/Components/Home/Home.js:51
 msgid "Bienvenue sur mon portfolio !"
 msgstr "Bienvenue sur mon portfolio !"
 
@@ -62,7 +62,7 @@ msgstr "Cliquez sur un événement pour en savoir plus"
 msgid "Communication"
 msgstr "Communication"
 
-#: src/Components/LayoutElements/NavBar.js:39
+#: src/Components/Layout/NavBar.js:39
 msgid "Contact"
 msgstr "Me contacter"
 
@@ -127,19 +127,18 @@ msgid "Error"
 msgstr "Erreur"
 
 #: src/Components/Welcome/WelcomePage.js:13
-msgid "Hello !"
-msgstr "Salut !"
+#~ msgid "Hello !"
+#~ msgstr "Salut !"
 
-#: src/Components/LayoutElements/NavBar.js:23
+#: src/Components/Layout/NavBar.js:23
 msgid "Home"
 msgstr "Accueil"
 
-#: src/Components/LayoutElements/Footer.js:28
+#: src/Components/Layout/Footer.js:28
 msgid "I'm still working on this website, so please be patient :)"
 msgstr "Je travaille encore sur ce site, alors soyez patients :)"
 
-#: src/Components/Welcome/Home.js:80
-#: src/Components/Welcome/WelcomePage.js:39
+#: src/Components/Home/Home.js:81
 msgid "Let's go !"
 msgstr "C'est parti !"
 
@@ -231,7 +230,7 @@ msgstr "Sens de la pédagogie"
 msgid "Sens de la responsabilité"
 msgstr "Responsable"
 
-#: src/Components/LayoutElements/NavBar.js:31
+#: src/Components/Layout/NavBar.js:31
 #: src/Components/Skills/SkillsPreview.js:50
 msgid "Skills"
 msgstr "Mes compétences"
@@ -296,7 +295,7 @@ msgstr "Succès"
 msgid "Système d'informations"
 msgstr "Système d'informations"
 
-#: src/Components/LayoutElements/NavBar.js:35
+#: src/Components/Layout/NavBar.js:35
 msgid "Timeline"
 msgstr "Mon parcours"
 
@@ -309,8 +308,8 @@ msgid "Vacation planner website"
 msgstr "Site web de planification de vacances"
 
 #: src/Components/Welcome/WelcomePage.js:17
-msgid "Welcome to my portfolio !"
-msgstr "Bienvenue sur mon portfolio !"
+#~ msgid "Welcome to my portfolio !"
+#~ msgstr "Bienvenue sur mon portfolio !"
 
 #: src/Components/About/AboutMe.js:37
 msgid "alcatel dashboard"
@@ -326,7 +325,7 @@ msgstr "09/2017 - 06/2020"
 
 #: src/data/timelineElements.js:48
 msgid "highschoolDescription"
-msgstr "Fillière générale S - SI (science de l'ingénieur), spécialité SI"
+msgstr "Filière générale S - SI (science de l'ingénieur), spécialité SI"
 
 #: src/data/timelineElements.js:47
 msgid "highschoolTitle"
