@@ -13,6 +13,7 @@ import ParticlesBackground from "./Components/Layout/ParticlesBackground";
 import "./styles/index.css";
 import TimelineDetails from "./Components/Timeline/TimelineDetails";
 import { en, fr } from "make-plural/plurals";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import ContactMe from "./Components/Contact/ContactMe";
 import AboutMe from "./Components/About/AboutMe";
 import Home from "./Components/Home/Home";
@@ -43,6 +44,7 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: [
+      "Open Sans",
       "Fjalla One",
       "Roboto",
       "Helvetica",
@@ -57,22 +59,27 @@ root.render(
   <React.StrictMode>
     <I18nProvider i18n={i18n}>
       <ThemeProvider theme={theme}>
-        <BrowserRouter>
-          <ParticlesBackground />
-          <Layout>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="timeline" element={<CustomTimeline />}>
-                <Route path=":elementId" element={<TimelineDetails />} />
-              </Route>
-              <Route path="skills" element={<SkillsPreview />} />
+        <GoogleReCaptchaProvider
+          reCaptchaKey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+          language="fr"
+        >
+          <BrowserRouter>
+            <ParticlesBackground />
+            <Layout>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="timeline" element={<CustomTimeline />}>
+                  <Route path=":elementId" element={<TimelineDetails />} />
+                </Route>
+                <Route path="skills" element={<SkillsPreview />} />
 
-              <Route path="contact" element={<ContactMe />} />
-              <Route path="about" element={<AboutMe />} />
-              <Route path="*" element={<Navigate to="/" replace />} />
-            </Routes>
-          </Layout>
-        </BrowserRouter>
+                <Route path="contact" element={<ContactMe />} />
+                <Route path="about" element={<AboutMe />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
+              </Routes>
+            </Layout>
+          </BrowserRouter>
+        </GoogleReCaptchaProvider>
       </ThemeProvider>
     </I18nProvider>
   </React.StrictMode>

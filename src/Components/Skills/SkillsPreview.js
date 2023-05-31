@@ -1,11 +1,13 @@
 import {
-  Divider,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
   Stack,
+  Tabs,
+  Tab,
   Typography,
+  Box,
 } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import { hardskills, softskills } from "../../data/skillsElements";
@@ -14,7 +16,12 @@ import CustomBox from "../Custom/CustomBox";
 import CustomTypoTitle from "../Custom/CustomTypoTitle";
 
 function SkillsPreview() {
-  const [skills, setSkills] = useState({ hardskills, softskills });
+  const [value, setValue] = useState(0);
+  const [skills, setSkills] = useState(null);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
 
   useEffect(() => {
     const filteredSkills = { hardskills, softskills };
@@ -30,15 +37,35 @@ function SkillsPreview() {
     setSkills(filteredSkills);
   }, []);
 
+  function TabPanel(props) {
+    const { children, value, index, ...other } = props;
+
+    return (
+      <div
+        role="tabpanel"
+        hidden={value !== index}
+        id={`simple-tabpanel-${index}`}
+        aria-labelledby={`simple-tab-${index}`}
+        {...other}
+      >
+        {value === index && (
+          <Box sx={{ p: 3 }}>
+            <Typography>{children}</Typography>
+          </Box>
+        )}
+      </div>
+    );
+  }
+
   return (
     <React.Fragment>
       <CustomBox
         whiteBox
-        responsive
+        width={{ xs: "90%", sm: "80%", md: "70%", lg: "60%" }}
         centered
         sx={{
-          width: "1200px",
           marginBlock: "5vh",
+          paddingInline: "5rem",
         }}
       >
         <Stack
@@ -47,71 +74,66 @@ function SkillsPreview() {
           alignItems={"center"}
           width={"100%"}
         >
-          <CustomTypoTitle divider={false}>{t`Skills`}</CustomTypoTitle>
-          <Stack
-            direction={{ sm: "column", md: "row" }}
-            spacing={1}
-            fontWeight={"bold"}
-            color={"white"}
-            justifyContent={"space-evenly"}
-            width={"100%"}
-          >
-            <CustomBox width={"100%"}>
-              <Divider>
-                <CustomTypoTitle divider={false} variant="h6" color={"primary"}>
-                  Soft skills
-                </CustomTypoTitle>
-              </Divider>
-              <CustomBox>
-                <List>
-                  {skills.softskills.map((skill) => (
-                    <ListItem key={skill.id}>
-                      <ListItemIcon>{skill.icon}</ListItemIcon>
-                      <ListItemText primary={skill.title} />
-                    </ListItem>
-                  ))}
-                </List>
-              </CustomBox>
-            </CustomBox>
+          <CustomTypoTitle>{t`Skills`}</CustomTypoTitle>
 
-            <Divider
-              orientation="vertical"
-              flexItem
-              display={{ xs: "none", sm: "block" }}
-            />
+          <Tabs value={value} onChange={handleChange}>
+            <Tab label="Soft skills" />
+            <Tab label="Hard skills" />
+          </Tabs>
 
-            <CustomBox width={"100%"}>
-              <Divider>
-                <CustomTypoTitle divider={false} variant="h6" color={"primary"}>
-                  Hard skills
-                </CustomTypoTitle>
-              </Divider>
-
-              <CustomBox>
-                <List>
-                  {skills.hardskills.map((skill) => (
-                    <ListItem>
-                      <ListItemIcon>{skill.icon}</ListItemIcon>
-                      <ListItemText key={skill.id}>
-                        <Stack
-                          direction={"row"}
-                          alignItems={"center"}
-                          spacing={1}
-                        >
-                          <Typography variant="body1" color={"primary"}>
-                            {skill.title}
-                          </Typography>
-                        </Stack>
-                      </ListItemText>
-                    </ListItem>
-                  ))}
-                </List>
-              </CustomBox>
-            </CustomBox>
-          </Stack>
+          <TabPanel value={value} index={0}>
+            {skills && SkillsList(skills.softskills)}
+          </TabPanel>
+          <TabPanel value={value} index={1}>
+            {skills && SkillsList(skills.hardskills)}
+          </TabPanel>
         </Stack>
       </CustomBox>
     </React.Fragment>
+  );
+}
+
+function SkillsList(skills) {
+  return (
+    <CustomBox width={"100%"}>
+      <List
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap",
+          padding: 0,
+          minHeight: "30vh",
+        }}
+      >
+        {skills.map((skill) => (
+          <ListItem
+            sx={{
+              height: "25%",
+              width: { xs: "100%", sm: "50%", md: "25%" },
+            }}
+          >
+            <ListItemIcon
+              sx={{
+                width: "25%",
+                display: "flex",
+                justifyContent: "end",
+                paddingRight: "0.5rem",
+              }}
+            >
+              {skill.icon}
+            </ListItemIcon>
+            <ListItemText
+              key={skill.id}
+              sx={{ width: "75%", paddingLeft: "0.5rem" }}
+            >
+              <Typography variant="body1" color={"primary"}>
+                {skill.title}
+              </Typography>
+            </ListItemText>
+          </ListItem>
+        ))}
+      </List>
+    </CustomBox>
   );
 }
 

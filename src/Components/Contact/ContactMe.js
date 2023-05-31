@@ -6,19 +6,25 @@ import {
   FormGroup,
   Alert,
   AlertTitle,
+  FormControlLabel,
+  Checkbox,
 } from "@mui/material";
 import { t } from "@lingui/macro";
-import axios from "axios";
 import CustomBox from "../Custom/CustomBox";
 import CustomTypoTitle from "../Custom/CustomTypoTitle";
+import emailjs from "@emailjs/browser";
+import { GoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const ContactMe = () => {
+  const [refreshReCaptcha, setRefreshReCaptcha] = useState(false);
+  const [isVerified, setIsVerified] = useState();
+
   const [userInfo, setUserInfo] = useState({
     name: "",
     email: "",
     message: "",
+    CV: false,
   });
-
   const [validations, setValidations] = useState({
     name: true,
     email: true,
@@ -54,11 +60,21 @@ const ContactMe = () => {
     validateInput("message", userInfo.message);
 
   const handleInputChange = (event) => {
-    const { name, value } = event.target;
+    const { name, value, checked } = event.target;
+
+    if (name === "CV") {
+      setUserInfo((prevUserInfo) => ({
+        ...prevUserInfo,
+        CV: checked,
+      }));
+      return;
+    }
+
     setUserInfo((prevUserInfo) => ({
       ...prevUserInfo,
       [name]: value,
     }));
+
     setValidations((prevValidations) => ({
       ...prevValidations,
       [name]: validateInput(name, value),
@@ -67,6 +83,17 @@ const ContactMe = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    if (!isVerified) {
+      setAlert(() => {
+        removeAlertAfter5s();
+        return {
+          type: "error",
+          message: t`Please verify that you are not a robot.`,
+        };
+      });
+      return;
+    }
     const isFormValid =
       Object.values(validations).every((value) => value) && areAllInputsValid();
     if (!isFormValid) {
@@ -77,19 +104,32 @@ const ContactMe = () => {
           message: t`Please fill out the form correctly.`,
         };
       });
-      removeAlertAfter5s();
       return;
     }
     setIsSubmitting(true);
-    const data = {
-      name: userInfo.name,
-      email: userInfo.email,
-      message: userInfo.message,
-    };
-
-    axios
-      .post("https://formspree.io/f/myyabryw", data)
+    emailjs
+      .send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        {
+          name: userInfo.name,
+          email: userInfo.email,
+          message: userInfo.message,
+          CV: userInfo.CV,
+        },
+        process.env.REACT_APP_EMAILJS_USER_ID
+      )
       .then(() => {
+        if (userInfo.CV) {
+          emailjs.send(
+            process.env.REACT_APP_EMAILJS_SERVICE_ID,
+            process.env.REACT_APP_EMAILJS_TEMPLATE_CV_ID,
+            { name: userInfo.name, email: userInfo.email },
+            process.env.REACT_APP_EMAILJS_USER_ID
+          );
+        }
+
+        setRefreshReCaptcha((r) => !r);
         setIsSubmitting(false);
         setAlert(() => {
           removeAlertAfter5s();
@@ -102,6 +142,7 @@ const ContactMe = () => {
           name: "",
           email: "",
           message: "",
+          CV: false,
         });
         setValidations({
           name: true,
@@ -110,6 +151,8 @@ const ContactMe = () => {
         });
       })
       .catch((err) => {
+        console.error(err);
+        setRefreshReCaptcha((r) => !r);
         setIsSubmitting(false);
         setAlert(() => {
           removeAlertAfter5s();
@@ -179,7 +222,7 @@ const ContactMe = () => {
               width: "100%",
             }}
           >
-            <FormGroup>
+            <FormGroup sx={{ marginTop: "1rem" }}>
               <TextField
                 id="name"
                 label="Name"
@@ -212,7 +255,6 @@ const ContactMe = () => {
               />
               <TextField
                 multiline
-                TextField
                 id="message"
                 label="Message"
                 name="message"
@@ -226,7 +268,16 @@ const ContactMe = () => {
                 error={!validations.message}
                 helperText={!validations.message && t`Please enter a message.`}
               />
-              <input type="text" name="_gotcha" style={{ display: "none" }} />
+              <FormControlLabel
+                control={<Checkbox name="CV" onChange={handleInputChange} />}
+                label={t`AskForCV`}
+                sx={{ m: 1 }}
+                value={userInfo.CV}
+              />
+              <GoogleReCaptcha
+                onVerify={setIsVerified}
+                refreshReCaptcha={refreshReCaptcha}
+              />
               <Button
                 variant="contained"
                 sx={{ m: 1 }}

@@ -14,7 +14,8 @@ function CustomBox({
       backgroundColor: "rgba(255, 255, 255, .8)",
       boxShadow: 1,
       borderRadius: "1rem",
-      padding: "1rem",
+      paddingBlock: "2rem",
+      paddingInline: "3rem",
       ...sx,
     });
 

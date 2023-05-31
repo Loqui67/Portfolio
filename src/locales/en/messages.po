@@ -34,6 +34,10 @@ msgstr "I speak French fluently and I have a good level in English, level B2 (TO
 msgid "Adaptabilité"
 msgstr "Adaptability"
 
+#: src/Components/Contact/ContactMe.js:261
+msgid "AskForCV"
+msgstr "I want to receive a CV to the email address above"
+
 #: src/data/skillsElements.js:49
 msgid "Autonomie"
 msgstr "Autonomy"
@@ -66,7 +70,7 @@ msgstr "Communication"
 msgid "Contact"
 msgstr "Contact me"
 
-#: src/Components/Contact/ContactMe.js:172
+#: src/Components/Contact/ContactMe.js:202
 msgid "Contact Me"
 msgstr "Send me a message!"
 
@@ -122,7 +126,7 @@ msgstr "I entered the CESI engineering school to study computer science engineer
 msgid "EntryCesiTitle"
 msgstr "Entry to CESI engineering school"
 
-#: src/Components/Contact/ContactMe.js:155
+#: src/Components/Contact/ContactMe.js:185
 msgid "Error"
 msgstr "Error"
 
@@ -142,7 +146,7 @@ msgstr "I'm still working on this website, so please be patient :)"
 msgid "Let's go !"
 msgstr "Let's go !"
 
-#: src/Components/Contact/ContactMe.js:98
+#: src/Components/Contact/ContactMe.js:126
 msgid "Message sent successfully!"
 msgstr "Message sent successfully!"
 
@@ -166,21 +170,25 @@ msgstr "My projects"
 msgid "Plateformer game"
 msgstr "Plateformer game"
 
-#: src/Components/Contact/ContactMe.js:227
+#: src/Components/Contact/ContactMe.js:257
 msgid "Please enter a message."
 msgstr "Please enter a message."
 
-#: src/Components/Contact/ContactMe.js:195
+#: src/Components/Contact/ContactMe.js:226
 msgid "Please enter a name."
 msgstr "Please enter a name."
 
-#: src/Components/Contact/ContactMe.js:210
+#: src/Components/Contact/ContactMe.js:241
 msgid "Please enter a valid email."
 msgstr "Please enter a valid email."
 
-#: src/Components/Contact/ContactMe.js:77
+#: src/Components/Contact/ContactMe.js:106
 msgid "Please fill out the form correctly."
 msgstr "Please fill out the form correctly."
+
+#: src/Components/Contact/ContactMe.js:94
+msgid "Please verify that you are not a robot."
+msgstr "Please verify that you are not a robot."
 
 #: src/Components/About/AboutMe.js:19
 msgid "Portfolio website"
@@ -231,11 +239,11 @@ msgid "Sens de la responsabilité"
 msgstr "Responsible"
 
 #: src/Components/Layout/NavBar.js:31
-#: src/Components/Skills/SkillsPreview.js:50
+#: src/Components/Skills/SkillsPreview.js:77
 msgid "Skills"
 msgstr "My skills"
 
-#: src/Components/Contact/ContactMe.js:118
+#: src/Components/Contact/ContactMe.js:148
 msgid "Something went wrong. Please try again later."
 msgstr "Something went wrong. Please try again later."
 
@@ -287,7 +295,7 @@ msgstr "An internship concluding the studies"
 msgid "StageA5Title"
 msgstr "End of study internship (5th year)"
 
-#: src/Components/Contact/ContactMe.js:155
+#: src/Components/Contact/ContactMe.js:185
 msgid "Success"
 msgstr "Success"
 
