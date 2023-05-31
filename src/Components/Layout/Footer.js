@@ -3,7 +3,6 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailIcon from "@mui/icons-material/Mail";
 import { IconButton, Typography, Grid, Toolbar, Stack } from "@mui/material";
-import { t } from "@lingui/macro";
 
 function Footer() {
   return (
@@ -24,33 +23,43 @@ function Footer() {
           }}
         >
           <Grid item>
-            <Typography variant="subtitle1">
-              {t`I'm still working on this website, so please be patient :)`}
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Stack direction="row" spacing={2}>
-              <IconButton
-                href="https://github.com/Loqui67"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GitHubIcon color={"secondary"} />
-              </IconButton>
-              <IconButton
-                href="https://www.linkedin.com/in/loicwalter/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <LinkedInIcon color={"secondary"} />
-              </IconButton>
-              <IconButton
-                href="mailto:loicwalter88@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <MailIcon color={"secondary"} />
-              </IconButton>
+            <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
+              <React.Fragment>
+                <IconButton
+                  href="https://github.com/Loqui67"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <GitHubIcon color={"secondary"} />
+                  <Typography variant="subtitle1" color={"secondary"} ml={1}>
+                    Github
+                  </Typography>
+                </IconButton>
+              </React.Fragment>
+              <React.Fragment>
+                <IconButton
+                  href="https://www.linkedin.com/in/loicwalter/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <LinkedInIcon color={"secondary"} />
+                  <Typography variant="subtitle1" color={"secondary"} ml={1}>
+                    LinkedIn
+                  </Typography>
+                </IconButton>
+              </React.Fragment>
+              <React.Fragment>
+                <IconButton
+                  href="mailto:loicwalter88@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MailIcon color={"secondary"} />
+                  <Typography variant="subtitle1" color={"secondary"} ml={1}>
+                    Email
+                  </Typography>
+                </IconButton>
+              </React.Fragment>
             </Stack>
           </Grid>
           <Grid item>
