@@ -8,6 +8,7 @@ import {
   AlertTitle,
   FormControlLabel,
   Checkbox,
+  Typography,
 } from "@mui/material";
 import { t } from "@lingui/macro";
 import CustomBox from "../Custom/CustomBox";
@@ -286,6 +287,13 @@ const ContactMe = () => {
               >
                 Submit
               </Button>
+              <Typography variant="caption" color={"primary"}>
+                This site is protected by reCAPTCHA and the Google{" "}
+                <a href="https://policies.google.com/privacy">Privacy Policy</a>{" "}
+                and{" "}
+                <a href="https://policies.google.com/terms">Terms of Service</a>{" "}
+                apply.
+              </Typography>
             </FormGroup>
           </CustomBox>
         </Stack>
