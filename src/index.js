@@ -11,7 +11,6 @@ import Layout from "./Components/Layout/Layout";
 import CustomTimeline from "./Components/Timeline/CustomTimeline";
 import ParticlesBackground from "./Components/Layout/ParticlesBackground";
 import "./styles/index.css";
-import TimelineDetails from "./Components/Timeline/TimelineDetails";
 import { en, fr } from "make-plural/plurals";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import ContactMe from "./Components/Contact/ContactMe";
@@ -68,9 +67,7 @@ root.render(
             <Layout>
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="timeline" element={<CustomTimeline />}>
-                  <Route path=":elementId" element={<TimelineDetails />} />
-                </Route>
+                <Route path="timeline" element={<CustomTimeline />} />
                 <Route path="skills" element={<SkillsPreview />} />
 
                 <Route path="contact" element={<ContactMe />} />

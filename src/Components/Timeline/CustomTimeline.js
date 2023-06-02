@@ -6,20 +6,35 @@ import {
   TimelineSeparator,
   TimelineContent,
   TimelineDot,
-  TimelineOppositeContent,
 } from "@mui/lab";
-import { Stack, Typography } from "@mui/material";
-import { Link, Outlet, useParams } from "react-router-dom";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardActions,
+  Collapse,
+  IconButton,
+  Typography,
+  CardMedia,
+} from "@mui/material";
 import { elements as rawElements } from "../../data/timelineElements";
-import { t } from "@lingui/macro";
 import CustomBox from "../Custom/CustomBox";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { styled } from "@mui/material/styles";
+
+const ExpandMore = styled((props) => {
+  const { expand, ...other } = props;
+  return <IconButton {...other} />;
+})(({ theme, expand }) => ({
+  transform: !expand ? "rotate(0deg)" : "rotate(180deg)",
+  marginLeft: "auto",
+  transition: theme.transitions.create("transform", {
+    duration: theme.transitions.duration.shortest,
+  }),
+}));
 
 function CustomTimeline() {
-  const { elementId } = useParams();
   const [elements, setElements] = useState([]);
-  const [selectedElement, setSelectedElement] = useState(
-    elements.find((element) => element.id === elementId)
-  );
 
   useEffect(() => {
     const filteredElements = rawElements().map((element) => {
@@ -31,73 +46,69 @@ function CustomTimeline() {
     });
 
     setElements(filteredElements);
-  }, [elementId]);
-
-  useEffect(() => {
-    setSelectedElement(elements.find((element) => element.id === elementId));
-  }, [elementId, elements]);
+  }, []);
 
   return (
     <React.Fragment>
-      <Stack
-        direction={{ xs: "column", sm: "row" }}
-        spacing={5}
-        justifyContent="space-evenly"
-        alignItems="center"
-        width="100%"
-        sx={{ marginBlock: "5vh" }}
+      <CustomBox
+        responsive
+        centered
+        sx={{
+          marginBlock: "2rem",
+        }}
       >
-        <CustomBox whiteBox responsive centered>
-          <Timeline>
-            <TimelineItem>
-              <TimelineOppositeContent />
+        <Timeline position="alternate">
+          {elements.map((element) => (
+            <TimelineItem key={element.id}>
               <TimelineSeparator>
+                <TimelineDot color={"white"} />
                 <TimelineConnector />
               </TimelineSeparator>
               <TimelineContent>
-                <Typography
-                  paragraph
-                  display={"block"}
-                  variant="subtitle1"
-                  sx={{
-                    opacity: "0.5",
-                    alignItems: "center",
-                    paddingLeft: "0.5rem",
-                  }}
-                >
-                  {t`Click on an event to learn more`}
-                </Typography>
+                <InfoCard {...element} />
               </TimelineContent>
             </TimelineItem>
-            {elements.map((element) => (
-              <TimelineItem key={element.id}>
-                <TimelineOppositeContent color="textSecondary">
-                  {element.date}
-                </TimelineOppositeContent>
-                <TimelineSeparator>
-                  <TimelineDot
-                    color="secondary"
-                    variant={element.future ? "outlined" : "filled"}
-                  />
-                  <TimelineConnector />
-                </TimelineSeparator>
-                <TimelineContent>
-                  <Link
-                    to={element.id}
-                    onClick={() => {
-                      setSelectedElement(element);
-                    }}
-                  >
-                    <Typography color={"primary"}>{element.title}</Typography>
-                  </Link>
-                </TimelineContent>
-              </TimelineItem>
-            ))}
-          </Timeline>
-        </CustomBox>
+          ))}
+        </Timeline>
+      </CustomBox>
+    </React.Fragment>
+  );
+}
 
-        <Outlet context={selectedElement} />
-      </Stack>
+function InfoCard({ title, date, description, image }) {
+  const [expanded, setExpanded] = useState(false);
+
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
+
+  return (
+    <React.Fragment>
+      <Card>
+        <CardHeader
+          title={title}
+          subheader={date}
+          sx={{ textAlign: "start" }}
+        />
+        <CardMedia component="img" image={image} alt={title} />
+        <CardActions disableSpacing>
+          <ExpandMore
+            expand={expanded}
+            onClick={handleExpandClick}
+            aria-expanded={expanded}
+            aria-label="show more"
+          >
+            <ExpandMoreIcon />
+          </ExpandMore>
+        </CardActions>
+        <Collapse in={expanded} timeout="auto">
+          <CardContent>
+            <Typography variant="body1" textAlign={"start"}>
+              {description}
+            </Typography>
+          </CardContent>
+        </Collapse>
+      </Card>
     </React.Fragment>
   );
 }

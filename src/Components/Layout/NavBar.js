@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import {
   Toolbar,
   Typography,
@@ -19,33 +19,42 @@ function NavBar() {
   const [value, setValue] = useState(0);
   const navigate = useNavigate();
 
+  const pages = useMemo(
+    () => [
+      {
+        name: t`Home`,
+        path: "/",
+      },
+      {
+        name: t`About`,
+        path: "/about",
+      },
+      {
+        name: t`Skills`,
+        path: "/skills",
+      },
+      {
+        name: t`Timeline`,
+        path: "/timeline",
+      },
+      {
+        name: t`Contact`,
+        path: "/contact",
+      },
+    ],
+    []
+  );
+
   const handleChange = (event, newValue) => {
     setValue(newValue);
     navigate(pages[newValue].path);
   };
 
-  const pages = [
-    {
-      name: t`Home`,
-      path: "/",
-    },
-    {
-      name: t`About`,
-      path: "/about",
-    },
-    {
-      name: t`Skills`,
-      path: "/skills",
-    },
-    {
-      name: t`Timeline`,
-      path: "/timeline",
-    },
-    {
-      name: t`Contact`,
-      path: "/contact",
-    },
-  ];
+  useEffect(() => {
+    const path = window.location.pathname;
+    const page = pages.findIndex((page) => page.path === path);
+    setValue(page);
+  }, [pages]);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
