@@ -209,11 +209,11 @@ const ContactMe = () => {
         whiteBox
         responsive
         sx={{
-          width: "1200px",
+          width: { xs: "90%", sm: "70%", md: "50%", lg: "40%" },
         }}
       >
-        <Stack direction="column" spacing={1} alignItems={"center"}>
-          <CustomTypoTitle>{t`Contact Me`}</CustomTypoTitle>
+        <Stack direction="column" spacing={1}>
+          <CustomTypoTitle divider>{t`Contact Me`}</CustomTypoTitle>
           {renderAlert()}
           <CustomBox
             component="form"

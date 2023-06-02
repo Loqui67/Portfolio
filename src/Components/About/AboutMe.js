@@ -12,6 +12,26 @@ import CustomBox from "../Custom/CustomBox";
 import CustomTypoTitle from "../Custom/CustomTypoTitle";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { t } from "@lingui/macro";
+import { styled, css } from "@mui/system";
+
+const DividerWithContent = styled("div")(
+  () => css`
+    display: flex;
+    align-items: center; /* Aligner les éléments verticalement au centre si nécessaire */
+
+    &::before,
+    &::after {
+      content: "";
+      flex-grow: 1;
+      height: 1px; /* Ajustez l'épaisseur de la barre selon vos besoins */
+      background: linear-gradient(135deg, #49a09d, #9370db);
+    }
+
+    .text {
+      margin: 0 10px; /* Ajustez les marges du texte selon vos besoins */
+    }
+  `
+);
 
 function AboutMe() {
   const projects = [
@@ -58,7 +78,7 @@ function AboutMe() {
         >
           <CustomBox whiteBox centered width={"100%"}>
             <Stack direction={"column"} width={"100%"}>
-              <CustomTypoTitle>{t`About`}</CustomTypoTitle>
+              <CustomTypoTitle divider>{t`About`}</CustomTypoTitle>
               <Typography variant={"body1"} mt={2}>
                 {t`About me 1rst paragraph`}
               </Typography>
@@ -73,10 +93,7 @@ function AboutMe() {
 
           <CustomBox whiteBox centered width={"100%"}>
             <Stack direction={"column"} width={"100%"}>
-              <CustomTypoTitle divider={false}>
-                {t`My projects`}
-              </CustomTypoTitle>
-
+              <CustomTypoTitle>{t`My projects`}</CustomTypoTitle>
               <Stack
                 direction={{ xs: "column", sm: "row" }}
                 spacing={2}
@@ -85,11 +102,15 @@ function AboutMe() {
               >
                 <CustomBox width={"100%"}>
                   <Stack direction={"column"} spacing={2} width={"100%"}>
-                    <Divider>
-                      <CustomTypoTitle divider={false} variant="h6">
+                    <DividerWithContent>
+                      <CustomTypoTitle
+                        divider={false}
+                        variant="h6"
+                        sx={{ marginInline: 2, marginBlock: 0 }}
+                      >
                         {t`Projets personnels`}
                       </CustomTypoTitle>
-                    </Divider>
+                    </DividerWithContent>
                     <List>
                       {projects
                         .filter((project) => project.type === "personal")
@@ -118,18 +139,17 @@ function AboutMe() {
                     </List>
                   </Stack>
                 </CustomBox>
-                <Divider
-                  orientation={"vertical"}
-                  flexItem
-                  display={{ xs: "none", sm: "block" }}
-                />
                 <CustomBox width={"100%"}>
                   <Stack direction={"column"} spacing={2} width={"100%"}>
-                    <Divider>
-                      <CustomTypoTitle divider={false} variant="h6">
+                    <DividerWithContent>
+                      <CustomTypoTitle
+                        divider={false}
+                        variant="h6"
+                        sx={{ marginInline: 2, marginBlock: 0 }}
+                      >
                         {t`Projets professionnels`}
                       </CustomTypoTitle>
-                    </Divider>
+                    </DividerWithContent>
                     <List>
                       {projects
                         .filter((project) => project.type === "professional")

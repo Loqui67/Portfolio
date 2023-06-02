@@ -1,9 +1,22 @@
-import { Divider, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import React from "react";
+import { styled, css } from "@mui/system";
+
+const LittleDivider = styled(Typography)(
+  () => css`
+    &::after {
+      content: "";
+      display: block;
+      background: linear-gradient(135deg, #49a09d, #9370db);
+      margin-top: 10px;
+      height: 3px;
+    }
+  `
+);
 
 function CustomTypoTitle({
   children,
-  divider = true,
+  divider = false,
   variant = "h4",
   sx = {},
   ...props
@@ -15,10 +28,15 @@ function CustomTypoTitle({
 
   return (
     <React.Fragment>
-      <Typography variant={variant} sx={sx} {...props} gutterBottom>
-        {children}
-      </Typography>
-      {divider && <Divider flexItem />}
+      {divider ? (
+        <LittleDivider variant={variant} sx={sx} {...props} mb={2}>
+          {children}
+        </LittleDivider>
+      ) : (
+        <Typography variant={variant} sx={sx} {...props} mb={2}>
+          {children}
+        </Typography>
+      )}
     </React.Fragment>
   );
 }

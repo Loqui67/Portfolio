@@ -68,22 +68,18 @@ function SkillsPreview() {
           paddingInline: "5rem",
         }}
       >
-        <Stack
-          direction="column"
-          spacing={1}
-          alignItems={"center"}
-          width={"100%"}
-        >
-          <CustomTypoTitle>{t`Skills`}</CustomTypoTitle>
-
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            sx={{ width: { xs: "70%", sm: "50%" } }}
-          >
-            <Tab label="Soft skills" sx={{ width: "50%" }} />
-            <Tab label="Hard skills" sx={{ width: "50%" }} />
-          </Tabs>
+        <Stack direction="column" spacing={1} width={"100%"}>
+          <CustomTypoTitle divider>{t`Skills`}</CustomTypoTitle>
+          <Box align="center">
+            <Tabs
+              value={value}
+              onChange={handleChange}
+              sx={{ width: { xs: "70%", sm: "50%" } }}
+            >
+              <Tab label="Soft skills" sx={{ width: "50%" }} />
+              <Tab label="Hard skills" sx={{ width: "50%" }} />
+            </Tabs>
+          </Box>
 
           <TabPanel value={value} index={0}>
             {skills && <SkillsList skills={skills.softskills} />}
