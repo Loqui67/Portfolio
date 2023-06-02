@@ -2,8 +2,13 @@ import React, { useState } from "react";
 import { Button, MenuItem, Menu, Typography } from "@mui/material";
 import { i18n } from "@lingui/core";
 import { languages } from "../../data/languages";
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import { styled } from "@mui/system";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+
+const AnimatedArrow = styled(KeyboardArrowDownIcon)`
+  transition: transform 0.3s ease-in-out;
+  ${({ open }) => (open ? "transform: rotate(180deg);" : "")}
+`;
 
 function LanguageSwitcher() {
   const [language, setLanguage] = useState(
@@ -36,12 +41,7 @@ function LanguageSwitcher() {
         >
           {languages.find((l) => l.code === language).abreviation}
         </Typography>
-
-        {open ? (
-          <KeyboardArrowUpIcon color="white" />
-        ) : (
-          <KeyboardArrowDownIcon color="white" />
-        )}
+        <AnimatedArrow color="white" open={open} />
       </Button>
       <Menu
         anchorEl={anchorEl}

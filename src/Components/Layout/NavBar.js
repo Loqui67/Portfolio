@@ -60,6 +60,7 @@ function NavBar() {
       <CustomBox
         borderBottom={"solid thin rgba(255, 255, 255, .1)"}
         backgroundColor={"rgba(255, 255, 255, .1)"}
+        width={"100%"}
       >
         <Toolbar
           sx={{

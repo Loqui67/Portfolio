@@ -15,7 +15,7 @@ function Layout({ children }) {
       ref={ref}
     >
       <Grid container direction={"column"} minHeight={"100vh"}>
-        <Grid item sx={{ width: "100%" }}>
+        <Grid item>
           <NavBar />
         </Grid>
         <Grid
