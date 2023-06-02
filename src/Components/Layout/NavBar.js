@@ -2,21 +2,27 @@ import React, { useState } from "react";
 import {
   Toolbar,
   Typography,
-  Grid,
   Menu,
   MenuItem,
   IconButton,
-  Divider,
-  Button,
+  Tabs,
+  Tab,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { t } from "@lingui/macro";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CustomBox from "../Custom/CustomBox";
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
+  const [value, setValue] = useState(0);
+  const navigate = useNavigate();
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+    navigate(pages[newValue].path);
+  };
 
   const pages = [
     {
@@ -69,7 +75,7 @@ function NavBar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              color="white"
             >
               <MenuIcon />
             </IconButton>
@@ -103,48 +109,27 @@ function NavBar() {
               ))}
             </Menu>
           </CustomBox>
-          <CustomBox>
-            <Grid
-              container
-              columnSpacing={{ md: 1, lg: 2, xl: 3 }}
-              sx={{
-                display: { xs: "none", md: "flex" },
-                alignItems: "center",
-              }}
-              ml={{ md: 1, lg: 2 }}
+          <CustomBox sx={{ display: { xs: "none", md: "flex" } }}>
+            <Tabs
+              value={value}
+              onChange={handleChange}
+              TabIndicatorProps={{ style: { background: "#ffffff" } }}
             >
               {pages.map((page, index) => (
-                <React.Fragment key={index}>
-                  <Grid item>
-                    <Button
-                      className="navButton"
-                      component={Link}
-                      to={page.path}
-                      sx={{
-                        textTransform: "none",
-                      }}
+                <Tab
+                  key={index}
+                  label={
+                    <Typography
+                      variant="h6"
+                      color={"white.main"}
+                      textTransform={"none"}
                     >
-                      <Typography variant="h6" color={"primary"}>
-                        {page.name}
-                      </Typography>
-                    </Button>
-                  </Grid>
-                  {index !== pages.length - 1 && (
-                    <Grid item>
-                      <Divider
-                        orientation="vertical"
-                        sx={{
-                          backgroundColor: "primary.main",
-                          opacity: "0.5",
-                          height: "40px",
-                        }}
-                        flexItem
-                      />
-                    </Grid>
-                  )}
-                </React.Fragment>
+                      {page.name}
+                    </Typography>
+                  }
+                />
               ))}
-            </Grid>
+            </Tabs>
           </CustomBox>
           <LanguageSwitcher />
         </Toolbar>

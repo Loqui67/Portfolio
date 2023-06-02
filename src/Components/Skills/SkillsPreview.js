@@ -76,16 +76,20 @@ function SkillsPreview() {
         >
           <CustomTypoTitle>{t`Skills`}</CustomTypoTitle>
 
-          <Tabs value={value} onChange={handleChange}>
-            <Tab label="Soft skills" />
-            <Tab label="Hard skills" />
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            sx={{ width: { xs: "70%", sm: "50%" } }}
+          >
+            <Tab label="Soft skills" sx={{ width: "50%" }} />
+            <Tab label="Hard skills" sx={{ width: "50%" }} />
           </Tabs>
 
           <TabPanel value={value} index={0}>
-            {skills && SkillsList(skills.softskills)}
+            {skills && <SkillsList skills={skills.softskills} />}
           </TabPanel>
           <TabPanel value={value} index={1}>
-            {skills && SkillsList(skills.hardskills)}
+            {skills && <SkillsList skills={skills.hardskills} />}
           </TabPanel>
         </Stack>
       </CustomBox>
@@ -93,7 +97,7 @@ function SkillsPreview() {
   );
 }
 
-function SkillsList(skills) {
+function SkillsList({ skills }) {
   return (
     <CustomBox width={"100%"}>
       <List

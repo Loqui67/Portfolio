@@ -28,11 +28,20 @@ function LanguageSwitcher() {
   return (
     <React.Fragment>
       <Button onClick={handleClick} variant="text">
-        <Typography variant="h6" sx={{ flexGrow: 1 }}>
+        <Typography
+          variant="h6"
+          sx={{ flexGrow: 1 }}
+          color={"white.main"}
+          fontWeight={"bold"}
+        >
           {languages.find((l) => l.code === language).abreviation}
         </Typography>
 
-        {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+        {open ? (
+          <KeyboardArrowUpIcon color="white" />
+        ) : (
+          <KeyboardArrowDownIcon color="white" />
+        )}
       </Button>
       <Menu
         anchorEl={anchorEl}

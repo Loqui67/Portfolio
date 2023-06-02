@@ -57,22 +57,22 @@ function AboutMe() {
           width={"100%"}
         >
           <CustomBox whiteBox centered width={"100%"}>
-            <Stack direction={"column"} spacing={2} width={"100%"}>
+            <Stack direction={"column"} width={"100%"}>
               <CustomTypoTitle>{t`About`}</CustomTypoTitle>
-              <Typography variant={"body1"} gutterBottom>
+              <Typography variant={"body1"} mt={2}>
                 {t`About me 1rst paragraph`}
               </Typography>
-              <Typography variant={"body1"} gutterBottom>
+              <Typography variant={"body1"} mt={2}>
                 {t`About me 2nd paragraph`}
               </Typography>
-              <Typography variant={"body1"} gutterBottom>
+              <Typography variant={"body1"} mt={2}>
                 {t`About me 3rd paragraph`}
               </Typography>
             </Stack>
           </CustomBox>
 
           <CustomBox whiteBox centered width={"100%"}>
-            <Stack direction={"column"} spacing={2} width={"100%"}>
+            <Stack direction={"column"} width={"100%"}>
               <CustomTypoTitle divider={false}>
                 {t`My projects`}
               </CustomTypoTitle>

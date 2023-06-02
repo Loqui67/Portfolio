@@ -15,7 +15,7 @@ function CustomTypoTitle({
 
   return (
     <React.Fragment>
-      <Typography variant={variant} sx={sx} {...props}>
+      <Typography variant={variant} sx={sx} {...props} gutterBottom>
         {children}
       </Typography>
       {divider && <Divider flexItem />}

@@ -4,10 +4,18 @@ import NavBar from "./NavBar";
 import { Grid } from "@mui/material";
 
 function Layout({ children }) {
+  const ref = React.useRef(null);
   return (
-    <React.Fragment>
+    <div
+      style={{
+        overflowX: "hidden",
+        overflowY: "auto",
+        height: ref.current ? ref.current.clientHeight : "100vh",
+      }}
+      ref={ref}
+    >
       <Grid container direction={"column"} minHeight={"100vh"}>
-        <Grid item sx={{ minWidth: "100%" }}>
+        <Grid item sx={{ width: "100%" }}>
           <NavBar />
         </Grid>
         <Grid
@@ -26,7 +34,7 @@ function Layout({ children }) {
           <Footer />
         </Grid>
       </Grid>
-    </React.Fragment>
+    </div>
   );
 }
 
