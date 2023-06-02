@@ -70,7 +70,7 @@ function Footer() {
               </React.Fragment>
               <React.Fragment>
                 <AnimatedIconButton
-                  href="mailto:loicwalter88@gmail.com"
+                  href="mailto:loic.walter@viacesi.fr"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
