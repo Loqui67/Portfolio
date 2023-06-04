@@ -12,26 +12,7 @@ import CustomBox from "../Custom/CustomBox";
 import CustomTypoTitle from "../Custom/CustomTypoTitle";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { t } from "@lingui/macro";
-import { styled, css } from "@mui/system";
-
-const DividerWithContent = styled("div")(
-  () => css`
-    display: flex;
-    align-items: center; /* Aligner les éléments verticalement au centre si nécessaire */
-
-    &::before,
-    &::after {
-      content: "";
-      flex-grow: 1;
-      height: 1px; /* Ajustez l'épaisseur de la barre selon vos besoins */
-      background: linear-gradient(135deg, #49a09d, #9370db);
-    }
-
-    .text {
-      margin: 0 10px; /* Ajustez les marges du texte selon vos besoins */
-    }
-  `
-);
+import CustomDivider from "../Custom/CustomDivider";
 
 function AboutMe() {
   const projects = [
@@ -102,7 +83,7 @@ function AboutMe() {
               >
                 <CustomBox width={"100%"}>
                   <Stack direction={"column"} spacing={2} width={"100%"}>
-                    <DividerWithContent>
+                    <CustomDivider>
                       <CustomTypoTitle
                         divider={false}
                         variant="h6"
@@ -110,7 +91,7 @@ function AboutMe() {
                       >
                         {t`Projets personnels`}
                       </CustomTypoTitle>
-                    </DividerWithContent>
+                    </CustomDivider>
                     <List>
                       {projects
                         .filter((project) => project.type === "personal")
@@ -141,7 +122,7 @@ function AboutMe() {
                 </CustomBox>
                 <CustomBox width={"100%"}>
                   <Stack direction={"column"} spacing={2} width={"100%"}>
-                    <DividerWithContent>
+                    <CustomDivider>
                       <CustomTypoTitle
                         divider={false}
                         variant="h6"
@@ -149,7 +130,7 @@ function AboutMe() {
                       >
                         {t`Projets professionnels`}
                       </CustomTypoTitle>
-                    </DividerWithContent>
+                    </CustomDivider>
                     <List>
                       {projects
                         .filter((project) => project.type === "professional")

@@ -3,27 +3,25 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import MailIcon from "@mui/icons-material/Mail";
 import { IconButton, Typography, Grid, Toolbar, Stack } from "@mui/material";
-import { keyframes } from "@mui/system";
 import { styled } from "@mui/system";
 
-const bounceAnimation = keyframes`
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-`;
-
 const AnimatedIconButton = styled(IconButton)`
+  transition: transform 0.3s ease;
+
   &:hover {
-    animation: ${bounceAnimation} 0.5s forwards;
+    transform: translateY(-5px);
+  }
+
+  &:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(135deg, #49a09d, #9370db);
   }
 `;
-
 function Footer() {
   return (
     <React.Fragment>

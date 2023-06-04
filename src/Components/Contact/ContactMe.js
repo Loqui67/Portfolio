@@ -260,6 +260,7 @@ const ContactMe = () => {
                 label="Message"
                 name="message"
                 variant="outlined"
+                minRows={5}
                 disabled={isSubmitting}
                 value={userInfo.message}
                 onBlur={() => {

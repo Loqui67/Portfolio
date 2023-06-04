@@ -5,7 +5,7 @@ import { i18n } from "@lingui/core";
 import { I18nProvider } from "@lingui/react";
 import { messages as enMessages } from "./locales/en/messages";
 import { messages as frMessages } from "./locales/fr/messages";
-import { ThemeProvider, createTheme } from "@mui/material";
+import { ThemeProvider } from "@mui/material";
 import SkillsPreview from "./Components/Skills/SkillsPreview";
 import Layout from "./Components/Layout/Layout";
 import CustomTimeline from "./Components/Timeline/CustomTimeline";
@@ -16,6 +16,7 @@ import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import ContactMe from "./Components/Contact/ContactMe";
 import AboutMe from "./Components/About/AboutMe";
 import Home from "./Components/Home/Home";
+import theme from "./styles/theme";
 
 i18n.load({
   en: enMessages,
@@ -28,30 +29,6 @@ i18n.loadLocaleData({
 });
 
 i18n.activate(localStorage.getItem("language") || "en");
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: "#000000",
-    },
-    secondary: {
-      main: "#9370DB",
-    },
-    white: {
-      main: "#ffffff",
-    },
-  },
-  typography: {
-    fontFamily: [
-      "Open Sans",
-      "Fjalla One",
-      "Roboto",
-      "Helvetica",
-      "Arial",
-      "sans-serif",
-    ].join(","),
-  },
-});
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

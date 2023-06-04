@@ -76,8 +76,14 @@ function SkillsPreview() {
               onChange={handleChange}
               sx={{ width: { xs: "70%", sm: "50%" } }}
             >
-              <Tab label="Soft skills" sx={{ width: "50%" }} />
-              <Tab label="Hard skills" sx={{ width: "50%" }} />
+              <Tab
+                label={<Typography variant="body1">Soft skills</Typography>}
+                sx={{ width: "50%" }}
+              />
+              <Tab
+                label={<Typography variant="body1">Hard skills</Typography>}
+                sx={{ width: "50%" }}
+              />
             </Tabs>
           </Box>
 

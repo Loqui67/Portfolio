@@ -10,6 +10,14 @@ const AnimatedArrow = styled(KeyboardArrowDownIcon)`
   ${({ open }) => (open ? "transform: rotate(180deg);" : "")}
 `;
 
+const CustomMenuItem = styled(MenuItem)`
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateX(10px);
+  }
+`;
+
 function LanguageSwitcher() {
   const [language, setLanguage] = useState(
     localStorage.getItem("language") || "en"
@@ -47,19 +55,53 @@ function LanguageSwitcher() {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
-        anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-        transformOrigin={{ vertical: "top", horizontal: "left" }}
+        anchorOrigin={{
+          vertical: "bottom",
+          horizontal: "right",
+        }}
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "right",
+        }}
+        PaperProps={{
+          elevation: 0,
+          sx: {
+            overflow: "visible",
+            filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
+            mt: 1.5,
+            "& .MuiAvatar-root": {
+              width: 32,
+              height: 32,
+              ml: -0.5,
+              mr: 1,
+            },
+            "&:before": {
+              content: '""',
+              display: "block",
+              position: "absolute",
+              top: 0,
+              right: 14,
+              width: 10,
+              height: 10,
+              bgcolor: "background.paper",
+              transform: "translateY(-50%) rotate(45deg)",
+              zIndex: 0,
+            },
+          },
+        }}
       >
         {languages.map((language) => (
-          <MenuItem
+          <CustomMenuItem
             key={language.name}
             onClick={() => {
               handleLanguageChange(language.code);
               handleClose();
             }}
           >
-            {`${language.flag} ${language.name}`}
-          </MenuItem>
+            <Typography variant="h6" color={"primary"}>
+              {`${language.flag} ${language.name}`}
+            </Typography>
+          </CustomMenuItem>
         ))}
       </Menu>
     </React.Fragment>

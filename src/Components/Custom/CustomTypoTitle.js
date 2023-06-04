@@ -1,18 +1,16 @@
 import { Typography } from "@mui/material";
 import React from "react";
-import { styled, css } from "@mui/system";
+import { styled } from "@mui/system";
 
-const LittleDivider = styled(Typography)(
-  () => css`
-    &::after {
-      content: "";
-      display: block;
-      background: linear-gradient(135deg, #49a09d, #9370db);
-      margin-top: 10px;
-      height: 3px;
-    }
-  `
-);
+const LittleDivider = styled(Typography)`
+  &::after {
+    content: "";
+    display: block;
+    background: linear-gradient(135deg, #49a09d, #9370db);
+    margin-top: 10px;
+    height: 3px;
+  }
+`;
 
 function CustomTypoTitle({
   children,

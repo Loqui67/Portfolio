@@ -7,13 +7,23 @@ import {
   IconButton,
   Tabs,
   Tab,
+  Stack,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { t } from "@lingui/macro";
 import { Link, useNavigate } from "react-router-dom";
 import CustomBox from "../Custom/CustomBox";
+import { KeyboardArrowRight } from "@mui/icons-material";
+import { styled } from "@mui/system";
 
+const CustomMenuItem = styled(MenuItem)`
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateX(10px);
+  }
+`;
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [value, setValue] = useState(0);
@@ -90,7 +100,6 @@ function NavBar() {
               <MenuIcon />
             </IconButton>
             <Menu
-              sx={{ mt: "45px" }}
               id="menu-appbar"
               keepMounted
               anchorEl={anchorElNav}
@@ -101,21 +110,49 @@ function NavBar() {
                 horizontal: "right",
               }}
               transformOrigin={{
-                vertical: "bottom",
+                vertical: "top",
                 horizontal: "right",
+              }}
+              PaperProps={{
+                elevation: 0,
+                sx: {
+                  overflow: "visible",
+                  filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
+                  mt: 1.5,
+                  "& .MuiAvatar-root": {
+                    width: 32,
+                    height: 32,
+                    ml: -0.5,
+                    mr: 1,
+                  },
+                  "&:before": {
+                    content: '""',
+                    display: "block",
+                    position: "absolute",
+                    top: 0,
+                    left: 14,
+                    width: 10,
+                    height: 10,
+                    bgcolor: "background.paper",
+                    transform: "translateY(-50%) rotate(45deg)",
+                    zIndex: 0,
+                  },
+                },
               }}
             >
               {pages.map((page, index) => (
-                <MenuItem
-                  component={Link}
-                  to={page.path}
-                  divider={index !== pages.length - 1}
-                  key={index}
-                >
-                  <Typography variant="h6" color={"primary"}>
-                    {page.name}
-                  </Typography>
-                </MenuItem>
+                <CustomMenuItem component={Link} to={page.path} key={index}>
+                  <Stack
+                    direction={"row"}
+                    justifyContent={"space-between"}
+                    width={"100%"}
+                  >
+                    <Typography variant="h6" color={"primary"}>
+                      {page.name}
+                    </Typography>
+                    <KeyboardArrowRight color="primary" />
+                  </Stack>
+                </CustomMenuItem>
               ))}
             </Menu>
           </CustomBox>

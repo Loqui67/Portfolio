@@ -84,7 +84,13 @@ function InfoCard({ title, date, description, image }) {
 
   return (
     <React.Fragment>
-      <Card>
+      <Card
+        elevation={5}
+        sx={{
+          background:
+            "linear-gradient(135deg,rgba(220,220,220,1), rgba(20,20,20,1))",
+        }}
+      >
         <CardHeader
           title={title}
           subheader={date}
@@ -97,6 +103,7 @@ function InfoCard({ title, date, description, image }) {
             onClick={handleExpandClick}
             aria-expanded={expanded}
             aria-label="show more"
+            color={"white"}
           >
             <ExpandMoreIcon />
           </ExpandMore>
