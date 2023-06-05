@@ -88,7 +88,7 @@ function InfoCard({ title, date, description, image }) {
         elevation={5}
         sx={{
           background:
-            "linear-gradient(135deg,rgba(220,220,220,1), rgba(20,20,20,1))",
+            "linear-gradient(135deg,rgba(220,220,220,1), rgba(50,50,50,1))",
         }}
       >
         <CardHeader

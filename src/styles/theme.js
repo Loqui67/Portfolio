@@ -21,6 +21,9 @@ const theme = createTheme({
       "Arial",
       "sans-serif",
     ].join(","),
+    body1: {
+      color: "#ffffff",
+    },
   },
 });
 
