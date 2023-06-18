@@ -3,13 +3,13 @@ import { createTheme } from "@mui/material";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#000000",
+      main: "#000",
     },
     secondary: {
       main: "#9370DB",
     },
     white: {
-      main: "#ffffff",
+      main: "#fff",
     },
   },
   typography: {
@@ -22,7 +22,7 @@ const theme = createTheme({
       "sans-serif",
     ].join(","),
     body1: {
-      color: "#ffffff",
+      color: "#000",
     },
   },
 });

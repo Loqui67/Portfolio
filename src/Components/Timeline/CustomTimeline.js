@@ -88,7 +88,7 @@ function InfoCard({ title, date, description, image }) {
         elevation={5}
         sx={{
           background:
-            "linear-gradient(135deg,rgba(220,220,220,1), rgba(50,50,50,1))",
+            "linear-gradient(135deg,rgba(220,220,220,1), rgba(100,100,100,1))",
         }}
       >
         <CardHeader
@@ -110,7 +110,11 @@ function InfoCard({ title, date, description, image }) {
         </CardActions>
         <Collapse in={expanded} timeout="auto">
           <CardContent>
-            <Typography variant="body1" textAlign={"start"}>
+            <Typography
+              variant="body1"
+              textAlign={"start"}
+              color={"white.main"}
+            >
               {description}
             </Typography>
           </CardContent>

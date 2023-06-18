@@ -38,6 +38,7 @@ function Home() {
               fontStyle={"italic"}
               lineHeight={1}
               mb={3}
+              color={"white.main"}
             >
               Loïc Walter
             </Typography>
@@ -47,6 +48,7 @@ function Home() {
               fontStyle={"italic"}
               lineHeight={1}
               mb={5}
+              color={"white.main"}
             >
               {t`Bienvenue sur mon portfolio !`}
             </Typography>
