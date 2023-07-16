@@ -113,6 +113,14 @@ const rawHardskills = [
     icon: <WebIcon style={{ color: getRandomColor() }} />,
   },
   {
+    title: "VueJS",
+    icon: <WebIcon style={{ color: getRandomColor() }} />,
+  },
+  {
+    title: "Angular",
+    icon: <WebIcon style={{ color: getRandomColor() }} />,
+  },
+  {
     title: "NodeJS",
     icon: <ComputerIcon style={{ color: getRandomColor() }} />,
   },
