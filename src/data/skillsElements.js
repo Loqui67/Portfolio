@@ -23,6 +23,7 @@ import DeveloperBoardIcon from "@mui/icons-material/DeveloperBoard";
 import WebAssetIcon from "@mui/icons-material/WebAsset";
 import SettingsEthernetIcon from "@mui/icons-material/SettingsEthernet";
 import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
+import DataObjectIcon from "@mui/icons-material/DataObject";
 
 import { t } from "@lingui/macro";
 
@@ -129,10 +130,6 @@ const rawHardskills = [
     icon: <ExtensionIcon style={{ color: getRandomColor() }} />,
   },
   {
-    title: "MySQL",
-    icon: <StorageIcon style={{ color: getRandomColor() }} />,
-  },
-  {
     title: "C#",
     icon: <DeveloperBoardIcon style={{ color: getRandomColor() }} />,
   },
@@ -157,8 +154,16 @@ const rawHardskills = [
     icon: <SettingsEthernetIcon style={{ color: getRandomColor() }} />,
   },
   {
-    title: () => t`Système d'informations`,
+    title: () => `${t`Système d'informations`} / Active Directory, VPN, GPO`,
     icon: <SettingsApplicationsIcon style={{ color: getRandomColor() }} />,
+  },
+  {
+    title: "Big Data / Talend, Hadoop, Hive, Power BI",
+    icon: <DataObjectIcon style={{ color: getRandomColor() }} />,
+  },
+  {
+    title: "SQL, NoSQL / MongoDB, MySQL, Postgre, SQL Server",
+    icon: <StorageIcon style={{ color: getRandomColor() }} />,
   },
 ];
 

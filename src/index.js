@@ -9,7 +9,6 @@ import { ThemeProvider } from "@mui/material";
 import SkillsPreview from "./Components/Skills/SkillsPreview";
 import Layout from "./Components/Layout/Layout";
 import CustomTimeline from "./Components/Timeline/CustomTimeline";
-import ParticlesBackground from "./Components/Layout/ParticlesBackground";
 import "./styles/index.css";
 import { en, fr } from "make-plural/plurals";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
@@ -17,6 +16,7 @@ import ContactMe from "./Components/Contact/ContactMe";
 import AboutMe from "./Components/About/AboutMe";
 import Home from "./Components/Home/Home";
 import theme from "./styles/theme";
+import WtfAmIDoing from "./Components/WtfAmIDoing/WtfAmIDoing";
 
 i18n.load({
   en: enMessages,
@@ -40,18 +40,19 @@ root.render(
           language="fr"
         >
           <BrowserRouter>
-            <ParticlesBackground />
-            <Layout>
-              <Routes>
+            <Routes>
+              <Route path="shannen" element={<WtfAmIDoing />} />
+              <Route element={<Layout />}>
                 <Route path="/" element={<Home />} />
                 <Route path="timeline" element={<CustomTimeline />} />
                 <Route path="skills" element={<SkillsPreview />} />
 
                 <Route path="contact" element={<ContactMe />} />
                 <Route path="about" element={<AboutMe />} />
+
                 <Route path="*" element={<Navigate to="/" replace />} />
-              </Routes>
-            </Layout>
+              </Route>
+            </Routes>
           </BrowserRouter>
         </GoogleReCaptchaProvider>
       </ThemeProvider>

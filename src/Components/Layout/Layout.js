@@ -2,8 +2,10 @@ import React from "react";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
 import { Grid } from "@mui/material";
+import { Outlet } from "react-router-dom";
+import ParticlesBackground from "./ParticlesBackground";
 
-function Layout({ children }) {
+function Layout() {
   const ref = React.useRef(null);
   return (
     <div
@@ -14,6 +16,7 @@ function Layout({ children }) {
       }}
       ref={ref}
     >
+      <ParticlesBackground />
       <Grid container direction={"column"} minHeight={"100vh"}>
         <Grid item>
           <NavBar />
@@ -28,7 +31,7 @@ function Layout({ children }) {
             width: "100%",
           }}
         >
-          {children}
+          <Outlet />
         </Grid>
         <Grid item sx={{ mt: "auto", height: "10%" }}>
           <Footer />
